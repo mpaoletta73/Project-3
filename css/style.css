@@ -36,6 +36,7 @@ main {
   padding: 0.85rem 1.25rem;
 }
 .vis-header h2 { margin: 0; font-size: 1.1rem; color: #1a3a5c; }
+.vis-author     { font-size: 0.85rem; font-weight: normal; color: #555; }
 .vis-subtitle   { margin: 0.2rem 0 0; font-size: 0.85rem; color: #666; }
 
 /* The box group members drop their SVG/canvas into */
