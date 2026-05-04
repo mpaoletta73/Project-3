@@ -3,161 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Climate Data Visualization — Project 3</title>
+  <title>El Niño &amp; the Environment — Project 3</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <header>
-    <h1>Climate &amp; Environmental Data Explorer</h1>
-    <p class="subtitle">Interactive visualization of CMIP6 / GOES / MODIS environmental data subsets</p>
+    <h1>How Has El Niño Affected the Environment?</h1>
+    <p class="subtitle">
+      An interactive exploration using NASA MODIS / GOES / NOAA data &mdash; Project 3
+    </p>
   </header>
 
   <main>
 
-    <!-- ═══════════════════════════════════════════
-         DASHBOARD — Controls + SVG target
-    ════════════════════════════════════════════ -->
-    <div id="dashboard">
+    <!-- ═══════════════════════════════════════════════════════
+         HOW TO ADD YOUR VISUALIZATION
+         1. Create your script file, e.g. js/vis1.js
+         2. Uncomment the matching <script> tag at the bottom
+         3. Inside your script, select the container and remove
+            the placeholder, then append your SVG:
+              d3.select('#vis-1').select('.placeholder').remove();
+              const svg = d3.select('#vis-1').append('svg')...
+         4. Replace the subtitle text below with your chart title
+    ════════════════════════════════════════════════════════ -->
 
-      <aside id="controls">
-        <h2>Controls</h2>
-
-        <div class="control-group">
-          <label for="variable-select">Variable</label>
-          <select id="variable-select">
-            <option value="temperature">Temperature (°C)</option>
-            <option value="precipitation">Precipitation (mm)</option>
-            <option value="co2">CO₂ Concentration (ppm)</option>
-            <option value="sea_level">Sea Level Anomaly (cm)</option>
-          </select>
-        </div>
-
-        <div class="control-group">
-          <label for="region-select">Region</label>
-          <select id="region-select">
-            <option value="all">All Regions</option>
-            <option value="north_america">North America</option>
-            <option value="europe">Europe</option>
-            <option value="asia">Asia</option>
-            <option value="africa">Africa</option>
-            <option value="south_america">South America</option>
-            <option value="oceania">Oceania</option>
-          </select>
-        </div>
-
-        <div class="control-group">
-          <label for="year-range">
-            Year Range: <span id="year-display">1990 – 2020</span>
-          </label>
-          <div class="range-row">
-            <input type="range" id="year-start" min="1990" max="2020" value="1990" step="1" />
-            <input type="range" id="year-end"   min="1990" max="2020" value="2020" step="1" />
-          </div>
-        </div>
-
-        <div class="control-group">
-          <label>Chart Type</label>
-          <div class="button-group">
-            <button class="chart-btn active" data-chart="line">Line</button>
-            <button class="chart-btn"        data-chart="scatter">Scatter</button>
-            <button class="chart-btn"        data-chart="bar">Bar</button>
-          </div>
-        </div>
-
-        <div class="control-group">
-          <button id="reset-btn">Reset Filters</button>
-        </div>
-      </aside>
-
-      <div id="vis-container">
-        <!-- D3 injects the SVG here -->
-        <div id="tooltip" class="tooltip" style="display:none;"></div>
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 1</h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
       </div>
+      <div id="vis-1" class="vis-container">
+        <p class="placeholder">📌 Visualization 1 — target <code>#vis-1</code></p>
+      </div>
+    </section>
 
-    </div><!-- /#dashboard -->
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 2</h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+      </div>
+      <div id="vis-2" class="vis-container">
+        <p class="placeholder">📌 Visualization 2 — target <code>#vis-2</code></p>
+      </div>
+    </section>
 
-    <!-- ═══════════════════════════════════════════
-         WRITE-UP
-    ════════════════════════════════════════════ -->
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 3</h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+      </div>
+      <div id="vis-3" class="vis-container">
+        <p class="placeholder">📌 Visualization 3 — target <code>#vis-3</code></p>
+      </div>
+    </section>
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 4</h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+      </div>
+      <div id="vis-4" class="vis-container">
+        <p class="placeholder">📌 Visualization 4 — target <code>#vis-4</code></p>
+      </div>
+    </section>
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 5</h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+      </div>
+      <div id="vis-5" class="vis-container">
+        <p class="placeholder">📌 Visualization 5 — target <code>#vis-5</code></p>
+      </div>
+    </section>
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 6</h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+      </div>
+      <div id="vis-6" class="vis-container">
+        <p class="placeholder">📌 Visualization 6 — target <code>#vis-6</code></p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         WRITE-UP  (required by rubric — fill in before submitting)
+    ════════════════════════════════════════════════════════ -->
     <article id="writeup">
-
       <h2>Project Write-Up</h2>
 
-      <!-- 1. Design Rationale -->
-      <section id="design-rationale">
+      <section>
+        <h3>Research Question</h3>
+        <p>
+          How does El Niño alter key environmental indicators — sea surface temperature,
+          precipitation, vegetation cover, and atmospheric conditions — across the Pacific
+          region, as observed in NASA satellite and NOAA climate data?
+        </p>
+      </section>
+
+      <section>
+        <h3>Data Sources</h3>
+        <ul>
+          <li>
+            <strong>NOAA Oceanic Niño Index (ONI):</strong> 3-month rolling average SST
+            anomalies in the Niño 3.4 region (5°N–5°S, 170°W–120°W), 1950–present.
+            <a href="https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt" target="_blank">CPC NCEP</a>
+          </li>
+          <li>
+            <strong>NASA MODIS:</strong> Global daily satellite imagery (vegetation, land
+            temperature, aerosols) via
+            <a href="https://worldview.earthdata.nasa.gov/" target="_blank">NASA Earthdata Worldview</a>
+            and the <a href="https://nasa-gibs.github.io/gibs-api-docs/" target="_blank">GIBS REST API</a>.
+          </li>
+          <li>
+            <strong>NOAA GOES:</strong> Geostationary satellite imagery (GOES-16/17) accessed
+            via <a href="https://registry.opendata.aws/noaa-goes/" target="_blank">AWS Open Data Registry</a>.
+          </li>
+          <li>
+            <strong>CMIP6:</strong> Global climate model simulations (temperature, precipitation,
+            greenhouse gas projections) from the
+            <a href="https://cloud.google.com/storage/docs/public-datasets/cmip6" target="_blank">NOAA public CMIP6 dataset on Google Cloud</a>.
+          </li>
+        </ul>
+      </section>
+
+      <section>
         <h3>Design Rationale</h3>
+        <p><em>
+          For each visualization, explain: what marks and encoding channels you chose and why,
+          what alternatives you considered, and how your interaction design helps the reader
+          discover patterns that a static plot could not.
+        </em></p>
 
-        <h4>Visual Encodings</h4>
-        <p>
-          The primary mark for the line chart is a <strong>path</strong>, chosen because
-          climate variables are continuous over time and a connected line best preserves the
-          perceptual impression of trend and rate-of-change—properties that a bar or scatter
-          mark would obscure. For the scatter view, <strong>circles</strong> encode individual
-          observations so that density and outliers become visible without implying a temporal
-          ordering that may not exist in a cross-sectional slice.
-        </p>
-        <p>
-          <strong>Color</strong> is mapped through a diverging
-          (cool–warm) scale for temperature data, anchored at the pre-industrial baseline.
-          Diverging scales are expressively appropriate here because the data is bipolar
-          (anomalies can be positive or negative), and a sequential scale would falsely suggest
-          that every value above zero is "more" of the same thing rather than a departure from
-          a neutral midpoint. For precipitation and CO₂—both ratio-scale variables with a
-          meaningful zero—a sequential, perceptually-uniform scale (viridis) is used instead to
-          avoid implying a neutral midpoint that does not exist in those variables.
-        </p>
+        <h4>Visualization 1 — Visual Encodings &amp; Interaction</h4>
+        <p>[ Replace with your rationale. Include marks, channels, color palette choice, and what interactions you added (e.g. tooltips, brushing, filters) and why. ]</p>
 
-        <h4>Interaction Design</h4>
-        <p>
-          Three interaction idioms were selected to guide users toward patterns that a static
-          plot cannot reveal:
-        </p>
-        <ol>
-          <li>
-            <strong>Linked year-range sliders</strong> implement a <em>dynamic query</em>
-            pattern: users continuously drag to filter the temporal window and the chart
-            re-renders in under 300 ms, making it easy to isolate multi-decadal trends or
-            short-term anomalies without context-switching.
-          </li>
-          <li>
-            <strong>Variable and region dropdowns</strong> provide <em>attribute-based
-            filtering</em>. Changing the variable swaps the y-axis scale and color encoding
-            simultaneously, so users can directly compare the spatial signature of different
-            climate drivers within the same layout.
-          </li>
-          <li>
-            <strong>Tooltip details-on-demand</strong> appear on hover and surface exact
-            numeric values along with their metadata (year, region, source model). This avoids
-            cluttering the chart with labels while still letting a user interrogate any single
-            data point precisely—a key principle from the
-            <em>visual information-seeking mantra</em> (Shneiderman, 1996).
-          </li>
-        </ol>
+        <h4>Visualization 2 — Visual Encodings &amp; Interaction</h4>
+        <p>[ Replace with your rationale. ]</p>
+
+        <h4>Visualization 3 — Visual Encodings &amp; Interaction</h4>
+        <p>[ Replace with your rationale. ]</p>
+
+        <h4>Visualization 4 — Visual Encodings &amp; Interaction</h4>
+        <p>[ Replace with your rationale. ]</p>
+
+        <h4>Visualization 5 — Visual Encodings &amp; Interaction</h4>
+        <p>[ Replace with your rationale. ]</p>
+
+        <h4>Visualization 6 — Visual Encodings &amp; Interaction</h4>
+        <p>[ Replace with your rationale. ]</p>
       </section>
 
-      <!-- 2. Development Process -->
-      <section id="development-process">
-        <h3>Development Process Overview</h3>
+      <section>
+        <h3>Data Transformations</h3>
         <p>
-          The project was built in three phases. First, the CSV subset was prepared by
-          filtering the full CMIP6 model output to a manageable number of rows, normalizing
-          column names, and verifying that no sentinel values remained. Second, the
-          visualization skeleton—axes, scales, and static SVG structure—was implemented in
-          <code>js/visualization.js</code> and confirmed with a hard-coded data stub before any
-          real data was wired in. Third, <code>js/main.js</code> was connected to load the CSV
-          asynchronously and dispatch filtered subsets to the chart's <code>update()</code>
-          method whenever a control changed.
-        </p>
-        <p>
-          The most time-consuming aspect was tuning the D3 enter/update/exit pattern so that
-          transitions remained smooth when the user rapidly moves the year-range sliders.
-          Debouncing the slider input event to 50 ms resolved the visual stuttering caused by
-          firing too many redraws per second.
+          [ Describe any filtering, aggregation, or normalization applied to the raw data before
+          plotting — e.g. "We filtered ONI records to El Niño years (anomaly ≥ +0.5°C for 5+
+          consecutive seasons) and computed seasonal means per region." This is graded. ]
         </p>
       </section>
 
-    </article><!-- /#writeup -->
+      <section>
+        <h3>Development Process</h3>
+        <p>[ How was work split among team members? Roughly how many person-hours total? What aspects took the longest? ]</p>
+        <ul>
+          <li><strong>Member 1 (name):</strong> [ tasks ]</li>
+          <li><strong>Member 2 (name):</strong> [ tasks ]</li>
+          <li><strong>Member 3 (name):</strong> [ tasks ]</li>
+          <li><strong>Member 4 (name):</strong> [ tasks ]</li>
+        </ul>
+      </section>
+
+    </article>
 
   </main>
 
@@ -165,11 +184,21 @@
     <p>Project 3 &mdash; Data Visualization &mdash; 2026</p>
   </footer>
 
-  <!-- D3 v7 from CDN -->
+  <!--
+    ═══════════════════════════════════════════════════════
+    SCRIPTS — add your visualization scripts below.
+    D3 v7 is already loaded; add any other libraries you need.
+    ═══════════════════════════════════════════════════════
+  -->
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-  <!-- App scripts — order matters: vis before main -->
-  <script src="js/visualization.js"></script>
-  <script src="js/main.js"></script>
+
+  <!-- Uncomment each line when your script file is ready -->
+  <!-- <script src="js/vis1.js"></script> -->
+  <!-- <script src="js/vis2.js"></script> -->
+  <!-- <script src="js/vis3.js"></script> -->
+  <!-- <script src="js/vis4.js"></script> -->
+  <!-- <script src="js/vis5.js"></script> -->
+  <!-- <script src="js/vis6.js"></script> -->
 
 </body>
 </html>
