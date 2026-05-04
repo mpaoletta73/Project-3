@@ -2,7 +2,7 @@
 
 Interactive visualization of environmental data (CMIP6 / GOES / MODIS subset) built with D3.js.
 
-**Live site:** https://YOUR-USERNAME.github.io/Project-3/
+**Live site:** https://mpaoletta73.github.io/Project-3/
 
 ## What it does
 
