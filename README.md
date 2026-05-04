@@ -1,35 +1,53 @@
-# Climate Data Visualization — Project 3
+# El Nino and Pacific Sea Surface Temperature
 
-Interactive visualization of environmental data (CMIP6 / GOES / MODIS subset) built with D3.js.
+DSC 106 Project 3 checkpoint page built with D3.js.
 
-**Live site:** https://YOUR-USERNAME.github.io/Project-3/
+## Question
 
-## What it does
+How do Pacific sea surface temperatures shift during El Nino events?
 
-- Line, scatter, and bar chart views of temperature, precipitation, CO₂, and sea-level data
-- Filter by variable, region, and year range using the sidebar controls
-- Hover any data point for exact values
+## Data
 
-## Run locally
+The checkpoint CSV at `data/pacific_sst_subset.csv` was prepared from the Google Cloud CMIP6 Zarr catalog:
 
-GitHub Pages requires the files to be served over HTTP. To preview locally:
+- Model: NCAR CESM2
+- Experiment: historical
+- Table: `Omon` monthly ocean data
+- Variable: `tos`, sea surface temperature
+- Grid: `gr`
+- Time exported for D3: 1996-2014
+- Transformation: nearest equatorial Pacific grid-point SST anomaly relative to each point's 1981-2010 monthly climatology
+
+The source files provided with the assignment confirm that `tos` means Sea Surface Temperature and that `Omon` is monthly ocean data.
+
+## Checkpoint Visualizations
+
+The page includes six D3 views for the checkpoint video:
+
+1. Nino 3.4 SST anomaly time series
+2. Monthly anomaly heatmap
+3. ENSO phase comparison
+4. Western, central, and eastern Pacific small multiples
+5. Longitude profile during El Nino months
+6. Interactive prototype with a time slider, phase filter, and Pacific point filter
+
+## Run Locally
+
+Serve the folder over HTTP:
 
 ```bash
-# Python 3
-python -m http.server 8000
+python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000` in your browser.
+Then open `http://localhost:8000`.
 
-## Project structure
+## Regenerate Data
 
-```
-Project-3/
-├── index.html          # Page shell + write-up
-├── css/style.css       # Styles
-├── js/
-│   ├── main.js         # Data loading, state, event listeners
-│   └── visualization.js# D3 drawing logic
-└── data/
-    └── environmental_subset.csv
+Use a virtual environment because the CMIP6 Python packages are not part of the static website:
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install pandas xarray zarr gcsfs cftime nc-time-axis
+python scripts/prepare_cmip6_sst.py
 ```
