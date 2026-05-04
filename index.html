@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Data Visualization — Project 3</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Climate &amp; Environmental Data Explorer</h1>
+    <p class="subtitle">Interactive visualization of CMIP6 / GOES / MODIS environmental data subsets</p>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         DASHBOARD — Controls + SVG target
+    ════════════════════════════════════════════ -->
+    <div id="dashboard">
+
+      <aside id="controls">
+        <h2>Controls</h2>
+
+        <div class="control-group">
+          <label for="variable-select">Variable</label>
+          <select id="variable-select">
+            <option value="temperature">Temperature (°C)</option>
+            <option value="precipitation">Precipitation (mm)</option>
+            <option value="co2">CO₂ Concentration (ppm)</option>
+            <option value="sea_level">Sea Level Anomaly (cm)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="region-select">Region</label>
+          <select id="region-select">
+            <option value="all">All Regions</option>
+            <option value="north_america">North America</option>
+            <option value="europe">Europe</option>
+            <option value="asia">Asia</option>
+            <option value="africa">Africa</option>
+            <option value="south_america">South America</option>
+            <option value="oceania">Oceania</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="year-range">
+            Year Range: <span id="year-display">1990 – 2020</span>
+          </label>
+          <div class="range-row">
+            <input type="range" id="year-start" min="1990" max="2020" value="1990" step="1" />
+            <input type="range" id="year-end"   min="1990" max="2020" value="2020" step="1" />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Chart Type</label>
+          <div class="button-group">
+            <button class="chart-btn active" data-chart="line">Line</button>
+            <button class="chart-btn"        data-chart="scatter">Scatter</button>
+            <button class="chart-btn"        data-chart="bar">Bar</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <button id="reset-btn">Reset Filters</button>
+        </div>
+      </aside>
+
+      <div id="vis-container">
+        <!-- D3 injects the SVG here -->
+        <div id="tooltip" class="tooltip" style="display:none;"></div>
+      </div>
+
+    </div><!-- /#dashboard -->
+
+    <!-- ═══════════════════════════════════════════
+         WRITE-UP
+    ════════════════════════════════════════════ -->
+    <article id="writeup">
+
+      <h2>Project Write-Up</h2>
+
+      <!-- 1. Design Rationale -->
+      <section id="design-rationale">
+        <h3>Design Rationale</h3>
+
+        <h4>Visual Encodings</h4>
+        <p>
+          The primary mark for the line chart is a <strong>path</strong>, chosen because
+          climate variables are continuous over time and a connected line best preserves the
+          perceptual impression of trend and rate-of-change—properties that a bar or scatter
+          mark would obscure. For the scatter view, <strong>circles</strong> encode individual
+          observations so that density and outliers become visible without implying a temporal
+          ordering that may not exist in a cross-sectional slice.
+        </p>
+        <p>
+          <strong>Color</strong> is mapped through a diverging
+          (cool–warm) scale for temperature data, anchored at the pre-industrial baseline.
+          Diverging scales are expressively appropriate here because the data is bipolar
+          (anomalies can be positive or negative), and a sequential scale would falsely suggest
+          that every value above zero is "more" of the same thing rather than a departure from
+          a neutral midpoint. For precipitation and CO₂—both ratio-scale variables with a
+          meaningful zero—a sequential, perceptually-uniform scale (viridis) is used instead to
+          avoid implying a neutral midpoint that does not exist in those variables.
+        </p>
+
+        <h4>Interaction Design</h4>
+        <p>
+          Three interaction idioms were selected to guide users toward patterns that a static
+          plot cannot reveal:
+        </p>
+        <ol>
+          <li>
+            <strong>Linked year-range sliders</strong> implement a <em>dynamic query</em>
+            pattern: users continuously drag to filter the temporal window and the chart
+            re-renders in under 300 ms, making it easy to isolate multi-decadal trends or
+            short-term anomalies without context-switching.
+          </li>
+          <li>
+            <strong>Variable and region dropdowns</strong> provide <em>attribute-based
+            filtering</em>. Changing the variable swaps the y-axis scale and color encoding
+            simultaneously, so users can directly compare the spatial signature of different
+            climate drivers within the same layout.
+          </li>
+          <li>
+            <strong>Tooltip details-on-demand</strong> appear on hover and surface exact
+            numeric values along with their metadata (year, region, source model). This avoids
+            cluttering the chart with labels while still letting a user interrogate any single
+            data point precisely—a key principle from the
+            <em>visual information-seeking mantra</em> (Shneiderman, 1996).
+          </li>
+        </ol>
+      </section>
+
+      <!-- 2. Development Process -->
+      <section id="development-process">
+        <h3>Development Process Overview</h3>
+        <p>
+          The project was built in three phases. First, the CSV subset was prepared by
+          filtering the full CMIP6 model output to a manageable number of rows, normalizing
+          column names, and verifying that no sentinel values remained. Second, the
+          visualization skeleton—axes, scales, and static SVG structure—was implemented in
+          <code>js/visualization.js</code> and confirmed with a hard-coded data stub before any
+          real data was wired in. Third, <code>js/main.js</code> was connected to load the CSV
+          asynchronously and dispatch filtered subsets to the chart's <code>update()</code>
+          method whenever a control changed.
+        </p>
+        <p>
+          The most time-consuming aspect was tuning the D3 enter/update/exit pattern so that
+          transitions remained smooth when the user rapidly moves the year-range sliders.
+          Debouncing the slider input event to 50 ms resolved the visual stuttering caused by
+          firing too many redraws per second.
+        </p>
+      </section>
+
+    </article><!-- /#writeup -->
+
+  </main>
+
+  <footer>
+    <p>Project 3 &mdash; Data Visualization &mdash; 2026</p>
+  </footer>
+
+  <!-- D3 v7 from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <!-- App scripts — order matters: vis before main -->
+  <script src="js/visualization.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

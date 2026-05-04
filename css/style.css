@@ -1,0 +1,207 @@
+/* ── Base ── */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #222;
+}
+
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+header h1  { margin: 0; font-size: 1.4rem; }
+header .subtitle { margin: 0.25rem 0 0; font-size: 0.9rem; opacity: 0.75; }
+
+main {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+/* ── Dashboard layout ── */
+#dashboard {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 700px) {
+  #dashboard { flex-direction: column; }
+}
+
+/* ── Controls sidebar ── */
+#controls {
+  width: 220px;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+#controls h2 { font-size: 1rem; margin: 0 0 1rem; }
+
+.control-group { margin-bottom: 1rem; }
+
+.control-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+.control-group select,
+.control-group input[type="range"] {
+  width: 100%;
+}
+
+.range-row { display: flex; flex-direction: column; gap: 0.25rem; }
+
+/* Chart type buttons */
+.button-group { display: flex; gap: 0.3rem; }
+
+.chart-btn {
+  flex: 1;
+  padding: 0.35rem 0;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.chart-btn.active {
+  background: #2c3e50;
+  color: #fff;
+  border-color: #2c3e50;
+}
+
+#reset-btn {
+  width: 100%;
+  padding: 0.4rem;
+  background: #fff;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+#reset-btn:hover { background: #e74c3c; color: #fff; }
+
+/* ── Vis container ── */
+#vis-container {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.75rem;
+  min-height: 460px;
+  position: relative;
+}
+
+#vis-container svg { display: block; width: 100%; height: auto; }
+
+/* D3 axis */
+.axis text  { font-size: 0.75rem; fill: #555; }
+.axis path,
+.axis line  { stroke: #bbb; }
+.axis-label { font-size: 0.8rem; fill: #555; }
+
+/* Marks */
+.line-path {
+  fill: none;
+  stroke: #2980b9;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
+
+.dot {
+  fill: #2980b9;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+.dot:hover { fill: #e67e22; }
+
+.bar-rect { fill: #2980b9; cursor: pointer; opacity: 0.8; }
+.bar-rect:hover { opacity: 1; fill: #e67e22; }
+
+/* Grid */
+.grid line  { stroke: #eee; }
+.grid path  { stroke-width: 0; }
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  z-index: 10;
+  max-width: 180px;
+}
+
+/* Loading / error */
+#vis-container .loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #888;
+}
+
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid #ddd;
+  border-top-color: #2980b9;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Write-up ── */
+#writeup {
+  margin-top: 2rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  line-height: 1.7;
+}
+
+#writeup h2  { margin-top: 0; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
+#writeup h3  { margin-top: 1.5rem; }
+#writeup h4  { margin-top: 1rem; color: #2980b9; }
+#writeup p   { margin: 0.5rem 0 0.75rem; color: #444; }
+#writeup ol,
+#writeup ul  { padding-left: 1.25rem; color: #444; }
+#writeup li  { margin-bottom: 0.4rem; }
+#writeup code {
+  background: #f0f0f0;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #888;
+  font-size: 0.82rem;
+  border-top: 1px solid #ddd;
+}

@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+*.swp
+
+# Node (if you ever add build tools)
+node_modules/
+
+# Raw / large data files used during exploration
+data/raw/
+*.nc
+*.hdf
