@@ -54,6 +54,12 @@
     .attr("role", "img")
     .attr("aria-label", "Interactive line chart of environmental indicators by region");
 
+  svg.append("rect")
+    .attr("class", "vis5-chart-bg")
+    .attr("width", totalWidth)
+    .attr("height", totalHeight)
+    .attr("fill", "#fff");
+
   const g = svg.append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -105,7 +111,8 @@
     .attr("class", "vis5-overlay")
     .attr("width", width)
     .attr("height", height)
-    .attr("fill", "transparent")
+    .attr("fill", "none")
+    .attr("pointer-events", "all")
     .style("pointer-events", "all");
 
   let activeVariable = "temperature";

@@ -110,6 +110,7 @@ main {
   width: 100%;
   height: auto;
   display: block;
+  background: #fff;
 }
 .vis5-grid line {
   stroke: #e7e7e7;
@@ -124,7 +125,7 @@ main {
   pointer-events: none;
 }
 .vis5-overlay {
-  fill: transparent;
+  fill: none !important;
   pointer-events: all;
 }
 .vis5-hover-line {
