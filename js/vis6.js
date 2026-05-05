@@ -196,13 +196,6 @@
 
     const mapG = svg.append("g");
 
-    // GIBS satellite tile (bottom layer — under country fills & borders)
-    const gibsImg = mapG.append("image")
-      .attr("x", 0).attr("y", 0)
-      .attr("width", W).attr("height", mapH)
-      .attr("preserveAspectRatio", "none")
-      .attr("opacity", 0.88);
-
     // ── Projection: equirectangular aligns exactly with GIBS BBOX ──
     // GIBS BBOX -180,-90,180,90 maps to SVG [0,0]→[W,mapH]
     const projection = d3.geoEquirectangular()
@@ -218,7 +211,7 @@
       .attr("stroke", "#162840")
       .attr("stroke-width", 0.4);
 
-    // Country fills (semi-transparent so GIBS imagery shows through)
+    // Country fills (landmass base, below GIBS imagery)
     const countries = topojson.feature(world, world.objects.countries);
     mapG.append("g").selectAll("path")
       .data(countries.features)
@@ -228,7 +221,17 @@
         .attr("opacity", 0.55)
         .attr("stroke", "none");
 
-    // Country borders
+    // GIBS satellite tile — above country fills so fire dots are never
+    // buried under the landmass overlay. screen blend makes dark
+    // (non-fire) pixels transparent while keeping bright fire colors vivid.
+    const gibsImg = mapG.append("image")
+      .attr("x", 0).attr("y", 0)
+      .attr("width", W).attr("height", mapH)
+      .attr("preserveAspectRatio", "none")
+      .attr("opacity", 1)
+      .style("mix-blend-mode", "screen");
+
+    // Country borders (on top of GIBS so outlines stay crisp)
     mapG.append("path")
       .datum(topojson.mesh(world, world.objects.countries, (a, b) => a !== b))
       .attr("d", pathGen)
