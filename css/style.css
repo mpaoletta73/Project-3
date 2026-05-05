@@ -125,7 +125,9 @@ main {
   pointer-events: none;
 }
 .vis5-overlay {
-  fill: none !important;
+  fill: #fff !important;
+  fill-opacity: 0 !important;
+  stroke: none;
   pointer-events: all;
 }
 .vis5-hover-line {

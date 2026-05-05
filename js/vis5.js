@@ -111,7 +111,9 @@
     .attr("class", "vis5-overlay")
     .attr("width", width)
     .attr("height", height)
-    .attr("fill", "none")
+    .attr("fill", "#fff")
+    .attr("fill-opacity", 0)
+    .attr("stroke", "none")
     .attr("pointer-events", "all")
     .style("pointer-events", "all");
 
