@@ -104,7 +104,9 @@
   const overlay = g.append("rect")
     .attr("class", "vis5-overlay")
     .attr("width", width)
-    .attr("height", height);
+    .attr("height", height)
+    .attr("fill", "transparent")
+    .style("pointer-events", "all");
 
   let activeVariable = "temperature";
   let visibleRegions = new Set();
