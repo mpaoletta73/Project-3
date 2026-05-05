@@ -6,59 +6,6 @@ const state = {
   dateIndex: 0,
   phase: 'all',
   region: 'all',
-/**
- * main.js — STUB / TEMPLATE FOR GROUP MEMBERS
- *
- * Each visualization lives in its own file (e.g. js/vis1.js, js/vis2.js).
- * Use this file as a reference for the recommended pattern, or delete it.
- *
- * ─── RECOMMENDED PATTERN ───────────────────────────────────────────────────
- *
- *  // 1. Load data
- *  d3.csv('data/your_file.csv', d => ({
- *    year:  +d.year,
- *    value: +d.value,
- *    // ...other fields
- *  })).then(data => {
- *
- *    // 2. Transform / filter here
- *    const filtered = data.filter(d => d.value != null);
- *
- *    // 3. Draw into the container your vis owns
- *    //    Vis 1 targets #vis-1
- *    //    Vis 2 targets #vis-2
- *    drawMyChart('#vis-1', filtered);
- *
- *  });
- *
- *  function drawMyChart(selector, data) {
- *    const container = d3.select(selector);
- *    // remove the placeholder text once you have data
- *    container.select('.placeholder').remove();
- *
- *    const svg = container.append('svg')
- *      .attr('width', '100%')
- *      .attr('height', 450);
- *
- *    // ... your D3 code here
- *  }
- *
- * ─── DATA SOURCES ──────────────────────────────────────────────────────────
- *  NOAA ONI index:  data/oni.csv   (columns: season, year, sst, anomaly)
- *  NASA/MODIS data: data/your_dataset.csv
- *
- * NOTE: run a local server to avoid CORS errors on d3.csv():
- *   python -m http.server 8000
- */
-
-// ─── Application State ──────────────────────────────────────────────────────
-let state = {
-  rawData:   [],
-  variable:  'temperature',
-  region:    'all',
-  yearStart: 1990,
-  yearEnd:   2020,
-  chartType: 'line',
 };
 
 let vis;
