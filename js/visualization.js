@@ -1,379 +1,304 @@
-/**
- * visualization.js — D3.js Engine
- *
- * Exposes the Visualization class with three public methods:
- *   init()               — Creates SVG, axes, scales (call once)
- *   update(data)         — Binds new data and transitions marks
- *   setChartType(type)   — Switches between 'line', 'scatter', 'bar'
- *
- * main.js owns state; this file is purely presentational.
- */
-
-class Visualization {
-  /**
-   * @param {string} containerSelector - CSS selector for the host <div>
-   * @param {string} tooltipSelector   - CSS selector for the tooltip <div>
-   */
-  constructor(containerSelector, tooltipSelector) {
-    this.containerEl = document.querySelector(containerSelector);
-    this.tooltipEl   = document.querySelector(tooltipSelector);
-    this.chartType   = 'line';
-
-    // Margin convention (room for axes + labels)
-    this.margin = { top: 30, right: 40, bottom: 60, left: 70 };
+class CheckpointVisualizations {
+  constructor(tooltipSelector) {
+    this.tooltip = d3.select(tooltipSelector);
+    this.regionOrder = ['western_pacific', 'central_pacific', 'nino_34', 'eastern_pacific'];
+    this.phaseOrder = ['La Niña', 'Neutral', 'El Niño'];
+    this.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    this.color = d3.scaleDiverging([-2.5, 0, 2.5], d3.interpolateRdBu).clamp(true);
+    this.regionColor = d3.scaleOrdinal()
+      .domain(['Western Pacific', 'Central Pacific', 'Nino 3.4', 'Eastern Pacific'])
+      .range(['#4c78a8', '#59a14f', '#f28e2b', '#e15759']);
   }
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // INIT — run once on page load
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  init() {
-    // Derive dimensions from the container's current width
-    const totalWidth  = this.containerEl.clientWidth  || 800;
-    const totalHeight = Math.max(420, Math.round(totalWidth * 0.5));
-
-    this.width  = totalWidth  - this.margin.left - this.margin.right;
-    this.height = totalHeight - this.margin.top  - this.margin.bottom;
-
-    // ── SVG root ───────────────────────────────────────────────────────────
-    this.svg = d3.select(this.containerEl)
-      .append('svg')
-        .attr('viewBox', `0 0 ${totalWidth} ${totalHeight}`)
-        .attr('preserveAspectRatio', 'xMidYMid meet')
-        .attr('aria-label', 'Environmental data chart');
-
-    // Inner group shifted by margins
-    this.g = this.svg.append('g')
-      .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
-
-    // ── Scales (domains set in update()) ───────────────────────────────────
-    this.xScale = d3.scaleLinear().range([0, this.width]);
-    this.yScale = d3.scaleLinear().range([this.height, 0]);
-
-    // Color scale for scatter/bar (sequential – viridis)
-    this.colorScale = d3.scaleSequential(d3.interpolateViridis);
-
-    // ── Grid ───────────────────────────────────────────────────────────────
-    this.xGridG = this.g.append('g').attr('class', 'grid x-grid')
-      .attr('transform', `translate(0,${this.height})`);
-    this.yGridG = this.g.append('g').attr('class', 'grid y-grid');
-
-    // ── Axes ───────────────────────────────────────────────────────────────
-    this.xAxisG = this.g.append('g').attr('class', 'axis x-axis')
-      .attr('transform', `translate(0,${this.height})`);
-    this.yAxisG = this.g.append('g').attr('class', 'axis y-axis');
-
-    // Axis labels
-    this.g.append('text')
-      .attr('class', 'axis-label x-axis-label')
-      .attr('text-anchor', 'middle')
-      .attr('x', this.width / 2)
-      .attr('y', this.height + 48)
-      .text('Year');
-
-    this.yAxisLabel = this.g.append('text')
-      .attr('class', 'axis-label y-axis-label')
-      .attr('text-anchor', 'middle')
-      .attr('transform', `rotate(-90)`)
-      .attr('x', -this.height / 2)
-      .attr('y', -55)
-      .text('Value');
-
-    // ── Marks layer (sits below tooltip overlay) ───────────────────────────
-    this.marksG = this.g.append('g').attr('class', 'marks');
-
-    // ── Clip path so marks don't overflow axes ─────────────────────────────
-    this.svg.append('defs').append('clipPath')
-      .attr('id', 'vis-clip')
-      .append('rect')
-        .attr('width',  this.width)
-        .attr('height', this.height);
-
-    this.marksG.attr('clip-path', 'url(#vis-clip)');
-
-    // ── Transparent overlay for mouse events on line/area charts ──────────
-    this.overlay = this.g.append('rect')
-      .attr('class', 'overlay')
-      .attr('width',  this.width)
-      .attr('height', this.height)
-      .style('fill', 'none')
-      .style('pointer-events', 'all');
-
-    // Handle window resize
-    window.addEventListener('resize', () => this._onResize());
+  drawAll(rows) {
+    this.drawTimeSeries(rows);
+    this.drawHeatmap(rows);
+    this.drawPhaseBars(rows);
+    this.drawSmallMultiples(rows);
+    this.drawLongitudeProfile(rows);
   }
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // UPDATE — called whenever data or filters change
-  // ═══════════════════════════════════════════════════════════════════════════
+  drawTimeSeries(rows) {
+    const data = rows.filter(d => d.region === 'nino_34').map(d => ({ ...d, time: parseDate(d.date) }));
+    const { g, width, height } = createChart('#time-series', 900, 350, { top: 28, right: 28, bottom: 62, left: 68 });
+    const x = d3.scaleUtc().domain(d3.extent(data, d => d.time)).range([0, width]);
+    const y = d3.scaleLinear().domain(d3.extent(data, d => d.anomaly)).nice().range([height, 0]);
 
-  /**
-   * @param {Array<Object>} data - filtered, typed rows from main.js
-   */
-  update(data) {
-    this._currentData = data;
+    addGrid(g, y, width);
+    g.append('g').attr('class', 'axis').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x).ticks(8));
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).ticks(6));
+    g.append('line').attr('class', 'zero-line').attr('x2', width).attr('y1', y(0)).attr('y2', y(0));
+    g.append('line').attr('class', 'threshold-line').attr('x2', width).attr('y1', y(0.5)).attr('y2', y(0.5));
 
-    if (!data || data.length === 0) {
-      this._showNoData();
+    g.append('path')
+      .datum(data)
+      .attr('class', 'main-line')
+      .attr('d', d3.line().x(d => x(d.time)).y(d => y(d.anomaly)).curve(d3.curveMonotoneX));
+
+    g.selectAll('circle')
+      .data(data.filter(d => d.phase === 'El Niño'))
+      .join('circle')
+      .attr('class', 'event-dot')
+      .attr('cx', d => x(d.time))
+      .attr('cy', d => y(d.anomaly))
+      .attr('r', 3.5)
+      .on('mousemove', (event, d) => this.showTooltip(event, tooltipHTML(d)))
+      .on('mouseleave', () => this.hideTooltip());
+
+    addAxisLabels(g, width, height, 'Year', 'SST anomaly (°C)');
+    g.append('text').attr('class', 'note').attr('x', width - 205).attr('y', y(0.5) - 9).text('+0.5°C El Nino-like threshold');
+  }
+
+  drawHeatmap(rows) {
+    const data = rows.filter(d => d.region === 'nino_34');
+    const years = Array.from(new Set(data.map(d => d.year))).sort(d3.ascending);
+    const { g, width, height } = createChart('#heatmap', 580, 390, { top: 24, right: 28, bottom: 88, left: 48 });
+    const x = d3.scaleBand().domain(years).range([0, width]).padding(0.04);
+    const y = d3.scaleBand().domain(d3.range(1, 13)).range([0, height]).padding(0.05);
+
+    g.selectAll('rect')
+      .data(data)
+      .join('rect')
+      .attr('x', d => x(d.year))
+      .attr('y', d => y(d.month))
+      .attr('width', x.bandwidth())
+      .attr('height', y.bandwidth())
+      .attr('fill', d => this.color(-d.anomaly))
+      .on('mousemove', (event, d) => this.showTooltip(event, tooltipHTML(d)))
+      .on('mouseleave', () => this.hideTooltip());
+
+    g.append('g').attr('class', 'axis').attr('transform', `translate(0,${height})`)
+      .call(d3.axisBottom(x).tickValues(years.filter(y => y % 4 === 0)).tickFormat(d3.format('d')));
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).tickFormat(d => this.months[d - 1]));
+    this.addAnomalyLegend(g, 0, height + 42, width);
+  }
+
+  drawPhaseBars(rows) {
+    const summaries = d3.rollups(
+      rows,
+      values => d3.mean(values, d => d.anomaly),
+      d => d.phase,
+      d => d.regionLabel
+    ).flatMap(([phase, byRegion]) => byRegion.map(([region, anomaly]) => ({ phase, region, anomaly })));
+
+    const regionLabels = ['Western Pacific', 'Central Pacific', 'Nino 3.4', 'Eastern Pacific'];
+    const { g, width, height } = createChart('#phase-bars', 580, 390, { top: 28, right: 20, bottom: 104, left: 64 });
+    const x0 = d3.scaleBand().domain(this.phaseOrder).range([0, width]).padding(0.24);
+    const x1 = d3.scaleBand().domain(regionLabels).range([0, x0.bandwidth()]).padding(0.08);
+    const y = d3.scaleLinear().domain(d3.extent(summaries, d => d.anomaly)).nice().range([height, 0]);
+
+    addGrid(g, y, width);
+    g.append('g').attr('class', 'axis').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x0));
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).ticks(5));
+    g.append('line').attr('class', 'zero-line').attr('x2', width).attr('y1', y(0)).attr('y2', y(0));
+
+    g.selectAll('rect')
+      .data(summaries)
+      .join('rect')
+      .attr('x', d => x0(d.phase) + x1(d.region))
+      .attr('y', d => y(Math.max(0, d.anomaly)))
+      .attr('width', x1.bandwidth())
+      .attr('height', d => Math.abs(y(d.anomaly) - y(0)))
+      .attr('fill', d => this.regionColor(d.region))
+      .on('mousemove', (event, d) => this.showTooltip(event, `<strong>${d.phase}</strong><br>${d.region}: ${d.anomaly.toFixed(2)}°C`))
+      .on('mouseleave', () => this.hideTooltip());
+
+    addAxisLabels(g, width, height, 'Climate phase from Nino 3.4 anomaly', 'Average SST anomaly (°C)');
+    this.addRegionLegend(g, 0, height + 58, regionLabels);
+  }
+
+  drawSmallMultiples(rows) {
+    const regions = this.regionOrder.filter(d => d !== 'nino_34');
+    const { g, width, height } = createChart('#small-multiples', 900, 380, { top: 34, right: 26, bottom: 58, left: 58 });
+    const gap = 40;
+    const panelWidth = (width - gap * (regions.length - 1)) / regions.length;
+    const x = d3.scaleUtc().domain(d3.extent(rows, d => parseDate(d.date))).range([0, panelWidth]);
+    const y = d3.scaleLinear().domain(d3.extent(rows, d => d.anomaly)).nice().range([height, 0]);
+    const line = d3.line().x(d => x(parseDate(d.date))).y(d => y(d.anomaly)).curve(d3.curveMonotoneX);
+
+    regions.forEach((region, i) => {
+      const data = rows.filter(d => d.region === region);
+      const panel = g.append('g').attr('transform', `translate(${i * (panelWidth + gap)},0)`);
+      addGrid(panel, y, panelWidth);
+      panel.append('path').datum(data).attr('class', 'small-line').attr('d', line);
+      panel.append('line').attr('class', 'zero-line').attr('x2', panelWidth).attr('y1', y(0)).attr('y2', y(0));
+      panel.append('g').attr('class', 'axis').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x).ticks(4));
+      if (i === 0) panel.append('g').attr('class', 'axis').call(d3.axisLeft(y).ticks(5));
+      panel.append('text').attr('class', 'panel-title').attr('x', panelWidth / 2).attr('y', -12).attr('text-anchor', 'middle').text(data[0].regionLabel);
+    });
+    addAxisLabels(g, width, height, 'Year', 'SST anomaly (°C)');
+  }
+
+  drawLongitudeProfile(rows) {
+    const summaries = d3.rollups(
+      rows.filter(d => d.phase === 'El Niño'),
+      values => d3.mean(values, d => d.anomaly),
+      d => d.region,
+      d => d.regionLabel,
+      d => d.longitude
+    ).map(([region, [[label, [[longitude, anomaly]]]]]) => ({ region, label, longitude, anomaly }))
+      .sort((a, b) => d3.ascending(a.longitude, b.longitude));
+
+    const { g, width, height } = createChart('#longitude-profile', 580, 370, { top: 28, right: 28, bottom: 70, left: 64 });
+    const x = d3.scaleLinear().domain([135, 260]).range([0, width]);
+    const y = d3.scaleLinear().domain([0, d3.max(summaries, d => d.anomaly)]).nice().range([height, 0]);
+
+    addGrid(g, y, width);
+    g.append('g').attr('class', 'axis').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x).ticks(5).tickFormat(d => `${d}E`));
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).ticks(5));
+    g.append('path').datum(summaries).attr('class', 'profile-line')
+      .attr('d', d3.line().x(d => x(d.longitude)).y(d => y(d.anomaly)).curve(d3.curveMonotoneX));
+
+    g.selectAll('circle')
+      .data(summaries)
+      .join('circle')
+      .attr('class', 'profile-dot')
+      .attr('cx', d => x(d.longitude))
+      .attr('cy', d => y(d.anomaly))
+      .attr('r', 6)
+      .attr('fill', d => this.color(-d.anomaly))
+      .on('mousemove', (event, d) => this.showTooltip(event, `<strong>${d.label}</strong><br>${d.longitude}E<br>${d.anomaly.toFixed(2)}°C average in El Nino-like months`))
+      .on('mouseleave', () => this.hideTooltip());
+
+    addAxisLabels(g, width, height, 'Longitude across the equatorial Pacific', 'Average SST anomaly (°C)');
+  }
+
+  drawPrototype(rows, filters) {
+    const byDate = rows.filter(d => d.date === filters.date);
+    const filtered = byDate
+      .filter(d => filters.phase === 'all' || d.phase === filters.phase)
+      .filter(d => filters.region === 'all' || d.region === filters.region)
+      .sort((a, b) => d3.ascending(a.longitude, b.longitude));
+
+    const { g, width, height } = createChart('#prototype', 580, 430, { top: 42, right: 28, bottom: 124, left: 64 });
+    const x = d3.scaleLinear().domain([135, 260]).range([0, width]);
+    const y = d3.scaleLinear().domain([-2.6, 2.6]).range([height, 0]);
+
+    addGrid(g, y, width);
+    g.append('g').attr('class', 'axis').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x).ticks(5).tickFormat(d => `${d}E`));
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).ticks(5));
+    g.append('line').attr('class', 'zero-line').attr('x2', width).attr('y1', y(0)).attr('y2', y(0));
+
+    if (!filtered.length) {
+      g.append('text').attr('class', 'empty').attr('x', width / 2).attr('y', height / 2).attr('text-anchor', 'middle')
+      .text('No selected region matches this phase in this month.');
       return;
     }
 
-    this._clearNoData();
-
-    // Update y-axis label text to reflect the active variable
-    const variable = data[0]?.variable || '';
-    const unit     = data[0]?.unit     || '';
-    this.yAxisLabel.text(unit ? `${this._labelFor(variable)} (${unit})` : this._labelFor(variable));
-
-    // ── Update scales ─────────────────────────────────────────────────────
-    const xExtent = d3.extent(data, d => d.year);
-    const yExtent = d3.extent(data, d => d.value);
-    const yPad    = (yExtent[1] - yExtent[0]) * 0.1 || 1;
-
-    this.xScale.domain([xExtent[0] - 0.5, xExtent[1] + 0.5]);
-    this.yScale.domain([yExtent[0] - yPad, yExtent[1] + yPad]);
-    this.colorScale.domain(yExtent);
-
-    // ── Re-draw axes ──────────────────────────────────────────────────────
-    const xAxis = d3.axisBottom(this.xScale)
-      .ticks(Math.min(data.length, 10))
-      .tickFormat(d3.format('d'));
-    const yAxis = d3.axisLeft(this.yScale).ticks(6);
-
-    this.xAxisG.transition().duration(300).call(xAxis);
-    this.yAxisG.transition().duration(300).call(yAxis);
-
-    // ── Grid lines ────────────────────────────────────────────────────────
-    this.xGridG.transition().duration(300).call(
-      d3.axisBottom(this.xScale).ticks(10).tickSize(-this.height).tickFormat(''));
-    this.yGridG.transition().duration(300).call(
-      d3.axisLeft(this.yScale).ticks(6).tickSize(-this.width).tickFormat(''));
-
-    // ── Dispatch to the correct chart renderer ────────────────────────────
-    this.marksG.selectAll('*').remove(); // clear previous marks
-
-    switch (this.chartType) {
-      case 'scatter': this._drawScatter(data); break;
-      case 'bar':     this._drawBar(data);     break;
-      default:        this._drawLine(data);
-    }
-  }
-
-  // ─── Chart-type setter ──────────────────────────────────────────────────
-
-  setChartType(type) {
-    this.chartType = type;
-  }
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // CHART RENDERERS
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  // ── Line chart ────────────────────────────────────────────────────────────
-
-  _drawLine(data) {
-    const lineGen = d3.line()
-      .x(d => this.xScale(d.year))
-      .y(d => this.yScale(d.value))
-      .curve(d3.curveMonotoneX);
-
-    // Path
-    const path = this.marksG.append('path')
-      .datum(data)
-      .attr('class', 'line-path')
-      .attr('d', lineGen);
-
-    // Animate path drawing
-    const totalLength = path.node().getTotalLength();
-    path
-      .attr('stroke-dasharray', `${totalLength} ${totalLength}`)
-      .attr('stroke-dashoffset', totalLength)
-      .transition().duration(600).ease(d3.easeCubicOut)
-        .attr('stroke-dashoffset', 0);
-
-    // Dots on every data point
-    this.marksG.selectAll('.dot')
-      .data(data)
-      .join(
-        enter => enter.append('circle')
-          .attr('class', 'dot')
-          .attr('r', 0)
-          .attr('cx', d => this.xScale(d.year))
-          .attr('cy', d => this.yScale(d.value))
-          .call(sel => sel.transition().duration(400).delay((_, i) => i * 20).attr('r', 4)),
-        update => update
-          .transition().duration(300)
-            .attr('cx', d => this.xScale(d.year))
-            .attr('cy', d => this.yScale(d.value)),
-        exit => exit.transition().duration(200).attr('r', 0).remove()
-      )
-      .on('mouseover', (event, d) => this._showTooltip(event, d))
-      .on('mousemove', (event)    => this._moveTooltip(event))
-      .on('mouseout',  ()         => this._hideTooltip());
-  }
-
-  // ── Scatter chart ─────────────────────────────────────────────────────────
-
-  _drawScatter(data) {
-    this.marksG.selectAll('.dot')
-      .data(data)
-      .join(
-        enter => enter.append('circle')
-          .attr('class', 'dot')
-          .attr('r', 0)
-          .attr('cx', d => this.xScale(d.year))
-          .attr('cy', d => this.yScale(d.value))
-          .style('fill', d => this.colorScale(d.value))
-          .call(sel => sel.transition().duration(400).delay((_, i) => i * 15).attr('r', 5)),
-        update => update
-          .transition().duration(300)
-            .attr('cx', d => this.xScale(d.year))
-            .attr('cy', d => this.yScale(d.value))
-            .style('fill', d => this.colorScale(d.value)),
-        exit => exit.transition().duration(200).attr('r', 0).remove()
-      )
-      .on('mouseover', (event, d) => this._showTooltip(event, d))
-      .on('mousemove', (event)    => this._moveTooltip(event))
-      .on('mouseout',  ()         => this._hideTooltip());
-  }
-
-  // ── Bar chart ─────────────────────────────────────────────────────────────
-
-  _drawBar(data) {
-    // Recalculate x as a band scale for bars
-    const years  = data.map(d => d.year);
-    const xBand  = d3.scaleBand()
-      .domain(years)
-      .range([0, this.width])
-      .padding(0.25);
-
-    this.marksG.selectAll('.bar-rect')
-      .data(data)
-      .join(
-        enter => enter.append('rect')
-          .attr('class', 'bar-rect')
-          .attr('x',     d => xBand(d.year))
-          .attr('width', xBand.bandwidth())
-          .attr('y',     this.yScale(0) || this.height)
-          .attr('height', 0)
-          .style('fill', d => this.colorScale(d.value))
-          .call(sel => sel.transition().duration(500).delay((_, i) => i * 20)
-            .attr('y',      d => this.yScale(Math.max(0, d.value)))
-            .attr('height', d => Math.abs(this.yScale(d.value) - (this.yScale(0) || this.height)))),
-        update => update
-          .transition().duration(300)
-            .attr('x',      d => xBand(d.year))
-            .attr('width',  xBand.bandwidth())
-            .attr('y',      d => this.yScale(Math.max(0, d.value)))
-            .attr('height', d => Math.abs(this.yScale(d.value) - (this.yScale(0) || this.height)))
-            .style('fill',  d => this.colorScale(d.value)),
-        exit => exit.transition().duration(200)
-          .attr('height', 0)
-          .attr('y', this.height)
-          .remove()
-      )
-      .on('mouseover', (event, d) => this._showTooltip(event, d))
-      .on('mousemove', (event)    => this._moveTooltip(event))
-      .on('mouseout',  ()         => this._hideTooltip());
-  }
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // TOOLTIP
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  _showTooltip(event, d) {
-    const fmt = d3.format(',.2f');
-    this.tooltipEl.style.display = 'block';
-    this.tooltipEl.innerHTML = `
-      <strong>${d.year}</strong>
-      ${this._labelFor(d.variable)}: <strong>${fmt(d.value)} ${d.unit}</strong><br/>
-      Region: ${d.region.replace(/_/g, ' ')}<br/>
-      Model: ${d.model}
-    `;
-    this._moveTooltip(event);
-  }
-
-  _moveTooltip(event) {
-    const containerRect = this.containerEl.getBoundingClientRect();
-    let x = event.clientX - containerRect.left + 14;
-    let y = event.clientY - containerRect.top  - 28;
-
-    // Prevent overflow on the right edge
-    const tipWidth = this.tooltipEl.offsetWidth;
-    if (x + tipWidth > containerRect.width - 10) {
-      x = event.clientX - containerRect.left - tipWidth - 14;
+    if (filtered.length > 1) {
+      g.append('path').datum(filtered).attr('class', 'prototype-line')
+        .attr('d', d3.line().x(d => x(d.longitude)).y(d => y(d.anomaly)).curve(d3.curveMonotoneX));
     }
 
-    this.tooltipEl.style.left = `${x}px`;
-    this.tooltipEl.style.top  = `${y}px`;
-  }
+    g.selectAll('circle')
+      .data(filtered)
+      .join('circle')
+      .attr('class', 'prototype-dot')
+      .attr('cx', d => x(d.longitude))
+      .attr('cy', d => y(d.anomaly))
+      .attr('r', 12)
+      .attr('fill', d => this.color(-d.anomaly))
+      .on('mousemove', (event, d) => this.showTooltip(event, tooltipHTML(d)))
+      .on('mouseleave', () => this.hideTooltip());
 
-  _hideTooltip() {
-    this.tooltipEl.style.display = 'none';
-  }
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // HELPERS
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  _labelFor(variable) {
-    const labels = {
-      temperature:   'Temperature',
-      precipitation: 'Precipitation',
-      co2:           'CO\u2082 Concentration',
-      sea_level:     'Sea Level Anomaly',
-    };
-    return labels[variable] || variable;
-  }
-
-  _showNoData() {
-    this.marksG.selectAll('*').remove();
-    this.marksG.append('text')
-      .attr('class', 'no-data-label')
-      .attr('x', this.width  / 2)
-      .attr('y', this.height / 2)
+    g.selectAll('.point-label')
+      .data(filtered)
+      .join('text')
+      .attr('class', 'point-label')
+      .attr('x', d => x(d.longitude))
+      .attr('y', d => y(d.anomaly) - 18)
       .attr('text-anchor', 'middle')
-      .style('fill', 'var(--color-muted)')
-      .style('font-size', '0.95rem')
-      .text('No data for the selected filters.');
+      .text(d => d.region === 'nino_34' ? 'Nino 3.4' : d.regionLabel.replace(' Pacific', ''));
+
+    g.append('text').attr('class', 'prototype-title').attr('x', 0).attr('y', -13)
+      .text(`${formatMonth(filters.date)} - ${byDate[0].phase}`);
+    addAxisLabels(g, width, height, 'Longitude across the equatorial Pacific', 'SST anomaly (°C)');
+    this.addAnomalyLegend(g, 0, height + 78, width);
   }
 
-  _clearNoData() {
-    this.marksG.selectAll('.no-data-label').remove();
+  addAnomalyLegend(g, x, y, width) {
+    const id = `legend-${Math.random().toString(16).slice(2)}`;
+    const gradient = g.append('defs').append('linearGradient').attr('id', id);
+    d3.range(0, 1.01, 0.1).forEach(t => {
+      gradient.append('stop').attr('offset', `${t * 100}%`).attr('stop-color', this.color(2.5 - t * 5));
+    });
+    const legendWidth = Math.min(260, width);
+    const legendX = x + Math.max(0, (width - legendWidth) / 2);
+    g.append('text')
+      .attr('class', 'legend-title')
+      .attr('x', legendX)
+      .attr('y', y - 8)
+      .text('SST anomaly: departure from normal (°C)');
+    g.append('rect')
+      .attr('x', legendX)
+      .attr('y', y)
+      .attr('width', legendWidth)
+      .attr('height', 10)
+      .attr('fill', `url(#${id})`);
+    g.append('text').attr('class', 'legend-label').attr('x', legendX).attr('y', y + 28).text('cooler');
+    g.append('text').attr('class', 'legend-label').attr('x', legendX + legendWidth / 2).attr('y', y + 28).attr('text-anchor', 'middle').text('0°C');
+    g.append('text').attr('class', 'legend-label').attr('x', legendX + legendWidth).attr('y', y + 28).attr('text-anchor', 'end').text('warmer');
   }
 
-  _onResize() {
-    // Re-derive dimensions from container
-    const totalWidth  = this.containerEl.clientWidth;
-    if (!totalWidth) return;
-
-    const totalHeight = Math.max(420, Math.round(totalWidth * 0.5));
-    this.width  = totalWidth  - this.margin.left - this.margin.right;
-    this.height = totalHeight - this.margin.top  - this.margin.bottom;
-
-    this.svg.attr('viewBox', `0 0 ${totalWidth} ${totalHeight}`);
-
-    this.xScale.range([0, this.width]);
-    this.yScale.range([this.height, 0]);
-
-    this.xAxisG.attr('transform', `translate(0,${this.height})`);
-    this.xGridG.attr('transform', `translate(0,${this.height})`);
-
-    this.svg.select('.x-axis-label')
-      .attr('x', this.width / 2)
-      .attr('y', this.height + 48);
-
-    this.svg.select('.y-axis-label')
-      .attr('x', -this.height / 2);
-
-    this.overlay
-      .attr('width',  this.width)
-      .attr('height', this.height);
-
-    this.svg.select('#vis-clip rect')
-      .attr('width',  this.width)
-      .attr('height', this.height);
-
-    if (this._currentData) this.update(this._currentData);
+  addRegionLegend(g, x, y, labels) {
+    const itemWidth = 118;
+    const legend = g.append('g').attr('class', 'region-legend').attr('transform', `translate(${x},${y})`);
+    legend.append('text').attr('class', 'legend-title').attr('x', 0).attr('y', -12).text('Pacific region');
+    labels.forEach((label, index) => {
+      const item = legend.append('g').attr('transform', `translate(${index * itemWidth},0)`);
+      item.append('rect').attr('width', 10).attr('height', 10).attr('rx', 2).attr('fill', this.regionColor(label));
+      item.append('text').attr('class', 'legend-label').attr('x', 15).attr('y', 10).text(label.replace(' Pacific', ''));
+    });
   }
+
+  showTooltip(event, html) {
+    this.tooltip
+      .attr('hidden', null)
+      .style('left', `${event.pageX + 14}px`)
+      .style('top', `${event.pageY - 28}px`)
+      .html(html);
+  }
+
+  hideTooltip() {
+    this.tooltip.attr('hidden', true);
+  }
+}
+
+function createChart(selector, outerWidth, outerHeight, margin) {
+  d3.select(selector).selectAll('*').remove();
+  const width = outerWidth - margin.left - margin.right;
+  const height = outerHeight - margin.top - margin.bottom;
+  const svg = d3.select(selector)
+    .append('svg')
+    .attr('viewBox', `0 0 ${outerWidth} ${outerHeight}`)
+    .attr('role', 'img');
+  const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+  return { svg, g, width, height };
+}
+
+function addGrid(g, y, width) {
+  g.append('g').attr('class', 'grid').call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat(''));
+}
+
+function addAxisLabels(g, width, height, xLabel, yLabel) {
+  g.append('text').attr('class', 'axis-label').attr('x', width / 2).attr('y', height + 42).attr('text-anchor', 'middle').text(xLabel);
+  g.append('text').attr('class', 'axis-label').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', -40).attr('text-anchor', 'middle').text(yLabel);
+}
+
+function parseDate(date) {
+  const [year, month] = date.split('-').map(Number);
+  return new Date(Date.UTC(year, month - 1, 1));
+}
+
+function formatMonth(date) {
+  return d3.utcFormat('%b %Y')(parseDate(date));
+}
+
+function tooltipHTML(d) {
+  return `
+    <strong>${formatMonth(d.date)}</strong><br>
+    ${d.regionLabel}: <strong>${d.anomaly.toFixed(2)}°C</strong><br>
+    Phase: ${d.phase}<br>
+    Point: ${d.latitude}N, ${d.longitude}E
+  `;
 }

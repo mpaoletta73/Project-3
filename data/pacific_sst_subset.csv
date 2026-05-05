@@ -1,0 +1,913 @@
+date,year,month,region,region_label,longitude,latitude,sst_anomaly,enso_phase,source
+1996-01,1996,1,western_pacific,Western Pacific,145,0,-0.204,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-01,1996,1,central_pacific,Central Pacific,190,0,-1.252,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-01,1996,1,nino_34,Nino 3.4,210,0,-1.350,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-01,1996,1,eastern_pacific,Eastern Pacific,250,0,-2.000,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-02,1996,2,western_pacific,Western Pacific,145,0,-0.168,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-02,1996,2,central_pacific,Central Pacific,190,0,-1.375,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-02,1996,2,nino_34,Nino 3.4,210,0,-1.571,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-02,1996,2,eastern_pacific,Eastern Pacific,250,0,-1.130,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-03,1996,3,western_pacific,Western Pacific,145,0,0.257,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-03,1996,3,central_pacific,Central Pacific,190,0,-1.153,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-03,1996,3,nino_34,Nino 3.4,210,0,-1.238,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-03,1996,3,eastern_pacific,Eastern Pacific,250,0,-0.425,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-04,1996,4,western_pacific,Western Pacific,145,0,-0.008,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-04,1996,4,central_pacific,Central Pacific,190,0,-0.648,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-04,1996,4,nino_34,Nino 3.4,210,0,-0.929,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-04,1996,4,eastern_pacific,Eastern Pacific,250,0,-0.184,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-05,1996,5,western_pacific,Western Pacific,145,0,0.205,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-05,1996,5,central_pacific,Central Pacific,190,0,-0.710,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-05,1996,5,nino_34,Nino 3.4,210,0,-0.397,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-05,1996,5,eastern_pacific,Eastern Pacific,250,0,0.092,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-06,1996,6,western_pacific,Western Pacific,145,0,-0.033,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-06,1996,6,central_pacific,Central Pacific,190,0,-0.320,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-06,1996,6,nino_34,Nino 3.4,210,0,0.019,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-06,1996,6,eastern_pacific,Eastern Pacific,250,0,0.939,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-07,1996,7,western_pacific,Western Pacific,145,0,0.074,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-07,1996,7,central_pacific,Central Pacific,190,0,-0.173,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-07,1996,7,nino_34,Nino 3.4,210,0,0.305,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-07,1996,7,eastern_pacific,Eastern Pacific,250,0,1.633,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-08,1996,8,western_pacific,Western Pacific,145,0,0.136,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-08,1996,8,central_pacific,Central Pacific,190,0,0.176,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-08,1996,8,nino_34,Nino 3.4,210,0,0.596,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-08,1996,8,eastern_pacific,Eastern Pacific,250,0,1.740,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-09,1996,9,western_pacific,Western Pacific,145,0,0.165,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-09,1996,9,central_pacific,Central Pacific,190,0,0.561,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-09,1996,9,nino_34,Nino 3.4,210,0,1.008,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-09,1996,9,eastern_pacific,Eastern Pacific,250,0,1.775,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-10,1996,10,western_pacific,Western Pacific,145,0,0.576,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-10,1996,10,central_pacific,Central Pacific,190,0,0.653,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-10,1996,10,nino_34,Nino 3.4,210,0,0.824,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-10,1996,10,eastern_pacific,Eastern Pacific,250,0,1.527,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-11,1996,11,western_pacific,Western Pacific,145,0,0.850,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-11,1996,11,central_pacific,Central Pacific,190,0,0.739,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-11,1996,11,nino_34,Nino 3.4,210,0,1.126,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-11,1996,11,eastern_pacific,Eastern Pacific,250,0,1.006,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-12,1996,12,western_pacific,Western Pacific,145,0,0.421,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-12,1996,12,central_pacific,Central Pacific,190,0,0.576,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-12,1996,12,nino_34,Nino 3.4,210,0,0.864,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1996-12,1996,12,eastern_pacific,Eastern Pacific,250,0,0.831,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-01,1997,1,western_pacific,Western Pacific,145,0,0.320,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-01,1997,1,central_pacific,Central Pacific,190,0,0.483,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-01,1997,1,nino_34,Nino 3.4,210,0,0.779,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-01,1997,1,eastern_pacific,Eastern Pacific,250,0,0.538,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-02,1997,2,western_pacific,Western Pacific,145,0,0.951,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-02,1997,2,central_pacific,Central Pacific,190,0,1.027,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-02,1997,2,nino_34,Nino 3.4,210,0,0.633,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-02,1997,2,eastern_pacific,Eastern Pacific,250,0,0.072,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-03,1997,3,western_pacific,Western Pacific,145,0,0.653,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-03,1997,3,central_pacific,Central Pacific,190,0,1.011,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-03,1997,3,nino_34,Nino 3.4,210,0,0.659,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-03,1997,3,eastern_pacific,Eastern Pacific,250,0,0.454,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-04,1997,4,western_pacific,Western Pacific,145,0,0.744,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-04,1997,4,central_pacific,Central Pacific,190,0,1.088,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-04,1997,4,nino_34,Nino 3.4,210,0,1.047,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-04,1997,4,eastern_pacific,Eastern Pacific,250,0,0.444,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-05,1997,5,western_pacific,Western Pacific,145,0,0.793,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-05,1997,5,central_pacific,Central Pacific,190,0,1.409,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-05,1997,5,nino_34,Nino 3.4,210,0,1.345,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-05,1997,5,eastern_pacific,Eastern Pacific,250,0,0.942,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-06,1997,6,western_pacific,Western Pacific,145,0,0.632,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-06,1997,6,central_pacific,Central Pacific,190,0,1.626,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-06,1997,6,nino_34,Nino 3.4,210,0,1.221,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-06,1997,6,eastern_pacific,Eastern Pacific,250,0,1.050,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-07,1997,7,western_pacific,Western Pacific,145,0,0.091,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-07,1997,7,central_pacific,Central Pacific,190,0,1.746,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-07,1997,7,nino_34,Nino 3.4,210,0,1.574,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-07,1997,7,eastern_pacific,Eastern Pacific,250,0,1.551,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-08,1997,8,western_pacific,Western Pacific,145,0,-0.296,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-08,1997,8,central_pacific,Central Pacific,190,0,1.294,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-08,1997,8,nino_34,Nino 3.4,210,0,1.227,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-08,1997,8,eastern_pacific,Eastern Pacific,250,0,1.637,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-09,1997,9,western_pacific,Western Pacific,145,0,-0.320,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-09,1997,9,central_pacific,Central Pacific,190,0,0.951,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-09,1997,9,nino_34,Nino 3.4,210,0,0.948,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-09,1997,9,eastern_pacific,Eastern Pacific,250,0,0.462,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-10,1997,10,western_pacific,Western Pacific,145,0,-0.380,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-10,1997,10,central_pacific,Central Pacific,190,0,1.591,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-10,1997,10,nino_34,Nino 3.4,210,0,1.308,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-10,1997,10,eastern_pacific,Eastern Pacific,250,0,1.079,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-11,1997,11,western_pacific,Western Pacific,145,0,0.075,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-11,1997,11,central_pacific,Central Pacific,190,0,1.387,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-11,1997,11,nino_34,Nino 3.4,210,0,1.732,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-11,1997,11,eastern_pacific,Eastern Pacific,250,0,1.078,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-12,1997,12,western_pacific,Western Pacific,145,0,0.107,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-12,1997,12,central_pacific,Central Pacific,190,0,1.466,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-12,1997,12,nino_34,Nino 3.4,210,0,1.511,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1997-12,1997,12,eastern_pacific,Eastern Pacific,250,0,0.855,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-01,1998,1,western_pacific,Western Pacific,145,0,-0.140,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-01,1998,1,central_pacific,Central Pacific,190,0,1.373,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-01,1998,1,nino_34,Nino 3.4,210,0,1.296,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-01,1998,1,eastern_pacific,Eastern Pacific,250,0,0.611,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-02,1998,2,western_pacific,Western Pacific,145,0,-0.005,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-02,1998,2,central_pacific,Central Pacific,190,0,1.112,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-02,1998,2,nino_34,Nino 3.4,210,0,0.765,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-02,1998,2,eastern_pacific,Eastern Pacific,250,0,0.382,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-03,1998,3,western_pacific,Western Pacific,145,0,0.212,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-03,1998,3,central_pacific,Central Pacific,190,0,0.829,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-03,1998,3,nino_34,Nino 3.4,210,0,0.589,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-03,1998,3,eastern_pacific,Eastern Pacific,250,0,0.063,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-04,1998,4,western_pacific,Western Pacific,145,0,0.461,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-04,1998,4,central_pacific,Central Pacific,190,0,0.406,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-04,1998,4,nino_34,Nino 3.4,210,0,0.238,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-04,1998,4,eastern_pacific,Eastern Pacific,250,0,-1.322,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-05,1998,5,western_pacific,Western Pacific,145,0,0.170,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-05,1998,5,central_pacific,Central Pacific,190,0,0.088,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-05,1998,5,nino_34,Nino 3.4,210,0,0.086,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-05,1998,5,eastern_pacific,Eastern Pacific,250,0,-2.217,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-06,1998,6,western_pacific,Western Pacific,145,0,0.381,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-06,1998,6,central_pacific,Central Pacific,190,0,-0.241,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-06,1998,6,nino_34,Nino 3.4,210,0,-0.265,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-06,1998,6,eastern_pacific,Eastern Pacific,250,0,-2.357,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-07,1998,7,western_pacific,Western Pacific,145,0,0.577,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-07,1998,7,central_pacific,Central Pacific,190,0,-0.254,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-07,1998,7,nino_34,Nino 3.4,210,0,-0.277,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-07,1998,7,eastern_pacific,Eastern Pacific,250,0,-2.104,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-08,1998,8,western_pacific,Western Pacific,145,0,0.749,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-08,1998,8,central_pacific,Central Pacific,190,0,0.009,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-08,1998,8,nino_34,Nino 3.4,210,0,-0.454,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-08,1998,8,eastern_pacific,Eastern Pacific,250,0,-1.874,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-09,1998,9,western_pacific,Western Pacific,145,0,0.680,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-09,1998,9,central_pacific,Central Pacific,190,0,-1.124,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-09,1998,9,nino_34,Nino 3.4,210,0,-2.068,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-09,1998,9,eastern_pacific,Eastern Pacific,250,0,-2.186,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-10,1998,10,western_pacific,Western Pacific,145,0,0.204,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-10,1998,10,central_pacific,Central Pacific,190,0,-1.394,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-10,1998,10,nino_34,Nino 3.4,210,0,-1.935,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-10,1998,10,eastern_pacific,Eastern Pacific,250,0,-3.106,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-11,1998,11,western_pacific,Western Pacific,145,0,0.247,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-11,1998,11,central_pacific,Central Pacific,190,0,-1.488,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-11,1998,11,nino_34,Nino 3.4,210,0,-2.167,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-11,1998,11,eastern_pacific,Eastern Pacific,250,0,-2.885,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-12,1998,12,western_pacific,Western Pacific,145,0,0.517,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-12,1998,12,central_pacific,Central Pacific,190,0,-1.563,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-12,1998,12,nino_34,Nino 3.4,210,0,-2.337,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1998-12,1998,12,eastern_pacific,Eastern Pacific,250,0,-2.123,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-01,1999,1,western_pacific,Western Pacific,145,0,0.650,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-01,1999,1,central_pacific,Central Pacific,190,0,-2.522,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-01,1999,1,nino_34,Nino 3.4,210,0,-2.474,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-01,1999,1,eastern_pacific,Eastern Pacific,250,0,-1.795,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-02,1999,2,western_pacific,Western Pacific,145,0,0.527,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-02,1999,2,central_pacific,Central Pacific,190,0,-2.476,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-02,1999,2,nino_34,Nino 3.4,210,0,-1.891,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-02,1999,2,eastern_pacific,Eastern Pacific,250,0,-1.283,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-03,1999,3,western_pacific,Western Pacific,145,0,-0.043,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-03,1999,3,central_pacific,Central Pacific,190,0,-1.627,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-03,1999,3,nino_34,Nino 3.4,210,0,-1.245,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-03,1999,3,eastern_pacific,Eastern Pacific,250,0,-1.005,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-04,1999,4,western_pacific,Western Pacific,145,0,-0.076,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-04,1999,4,central_pacific,Central Pacific,190,0,-1.792,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-04,1999,4,nino_34,Nino 3.4,210,0,-1.436,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-04,1999,4,eastern_pacific,Eastern Pacific,250,0,-0.835,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-05,1999,5,western_pacific,Western Pacific,145,0,-0.312,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-05,1999,5,central_pacific,Central Pacific,190,0,-1.788,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-05,1999,5,nino_34,Nino 3.4,210,0,-1.757,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-05,1999,5,eastern_pacific,Eastern Pacific,250,0,-1.354,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-06,1999,6,western_pacific,Western Pacific,145,0,-0.356,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-06,1999,6,central_pacific,Central Pacific,190,0,-1.891,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-06,1999,6,nino_34,Nino 3.4,210,0,-1.545,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-06,1999,6,eastern_pacific,Eastern Pacific,250,0,-1.783,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-07,1999,7,western_pacific,Western Pacific,145,0,-0.773,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-07,1999,7,central_pacific,Central Pacific,190,0,-1.825,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-07,1999,7,nino_34,Nino 3.4,210,0,-0.799,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-07,1999,7,eastern_pacific,Eastern Pacific,250,0,-1.372,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-08,1999,8,western_pacific,Western Pacific,145,0,-0.562,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-08,1999,8,central_pacific,Central Pacific,190,0,-1.109,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-08,1999,8,nino_34,Nino 3.4,210,0,-0.521,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-08,1999,8,eastern_pacific,Eastern Pacific,250,0,-1.801,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-09,1999,9,western_pacific,Western Pacific,145,0,-0.376,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-09,1999,9,central_pacific,Central Pacific,190,0,-0.572,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-09,1999,9,nino_34,Nino 3.4,210,0,-0.270,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-09,1999,9,eastern_pacific,Eastern Pacific,250,0,-0.799,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-10,1999,10,western_pacific,Western Pacific,145,0,-0.154,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-10,1999,10,central_pacific,Central Pacific,190,0,-0.771,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-10,1999,10,nino_34,Nino 3.4,210,0,-0.794,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-10,1999,10,eastern_pacific,Eastern Pacific,250,0,-0.912,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-11,1999,11,western_pacific,Western Pacific,145,0,-0.076,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-11,1999,11,central_pacific,Central Pacific,190,0,-0.822,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-11,1999,11,nino_34,Nino 3.4,210,0,-1.183,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-11,1999,11,eastern_pacific,Eastern Pacific,250,0,-1.330,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-12,1999,12,western_pacific,Western Pacific,145,0,0.137,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-12,1999,12,central_pacific,Central Pacific,190,0,-0.810,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-12,1999,12,nino_34,Nino 3.4,210,0,-0.982,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+1999-12,1999,12,eastern_pacific,Eastern Pacific,250,0,-1.151,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-01,2000,1,western_pacific,Western Pacific,145,0,0.074,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-01,2000,1,central_pacific,Central Pacific,190,0,-1.021,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-01,2000,1,nino_34,Nino 3.4,210,0,-1.496,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-01,2000,1,eastern_pacific,Eastern Pacific,250,0,-1.024,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-02,2000,2,western_pacific,Western Pacific,145,0,-0.046,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-02,2000,2,central_pacific,Central Pacific,190,0,-1.244,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-02,2000,2,nino_34,Nino 3.4,210,0,-1.138,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-02,2000,2,eastern_pacific,Eastern Pacific,250,0,-0.494,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-03,2000,3,western_pacific,Western Pacific,145,0,-0.024,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-03,2000,3,central_pacific,Central Pacific,190,0,-1.003,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-03,2000,3,nino_34,Nino 3.4,210,0,-0.531,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-03,2000,3,eastern_pacific,Eastern Pacific,250,0,0.836,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-04,2000,4,western_pacific,Western Pacific,145,0,-0.148,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-04,2000,4,central_pacific,Central Pacific,190,0,-0.148,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-04,2000,4,nino_34,Nino 3.4,210,0,-0.181,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-04,2000,4,eastern_pacific,Eastern Pacific,250,0,0.338,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-05,2000,5,western_pacific,Western Pacific,145,0,-0.348,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-05,2000,5,central_pacific,Central Pacific,190,0,0.180,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-05,2000,5,nino_34,Nino 3.4,210,0,-0.028,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-05,2000,5,eastern_pacific,Eastern Pacific,250,0,0.072,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-06,2000,6,western_pacific,Western Pacific,145,0,-0.579,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-06,2000,6,central_pacific,Central Pacific,190,0,0.060,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-06,2000,6,nino_34,Nino 3.4,210,0,0.332,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-06,2000,6,eastern_pacific,Eastern Pacific,250,0,1.276,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-07,2000,7,western_pacific,Western Pacific,145,0,-0.036,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-07,2000,7,central_pacific,Central Pacific,190,0,0.777,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-07,2000,7,nino_34,Nino 3.4,210,0,0.614,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-07,2000,7,eastern_pacific,Eastern Pacific,250,0,2.052,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-08,2000,8,western_pacific,Western Pacific,145,0,-0.264,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-08,2000,8,central_pacific,Central Pacific,190,0,1.343,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-08,2000,8,nino_34,Nino 3.4,210,0,0.770,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-08,2000,8,eastern_pacific,Eastern Pacific,250,0,2.236,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-09,2000,9,western_pacific,Western Pacific,145,0,-0.080,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-09,2000,9,central_pacific,Central Pacific,190,0,0.815,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-09,2000,9,nino_34,Nino 3.4,210,0,1.274,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-09,2000,9,eastern_pacific,Eastern Pacific,250,0,2.284,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-10,2000,10,western_pacific,Western Pacific,145,0,-0.266,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-10,2000,10,central_pacific,Central Pacific,190,0,1.012,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-10,2000,10,nino_34,Nino 3.4,210,0,1.156,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-10,2000,10,eastern_pacific,Eastern Pacific,250,0,2.337,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-11,2000,11,western_pacific,Western Pacific,145,0,0.241,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-11,2000,11,central_pacific,Central Pacific,190,0,1.399,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-11,2000,11,nino_34,Nino 3.4,210,0,1.910,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-11,2000,11,eastern_pacific,Eastern Pacific,250,0,2.185,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-12,2000,12,western_pacific,Western Pacific,145,0,0.438,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-12,2000,12,central_pacific,Central Pacific,190,0,1.494,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-12,2000,12,nino_34,Nino 3.4,210,0,1.761,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2000-12,2000,12,eastern_pacific,Eastern Pacific,250,0,2.033,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-01,2001,1,western_pacific,Western Pacific,145,0,0.281,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-01,2001,1,central_pacific,Central Pacific,190,0,1.529,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-01,2001,1,nino_34,Nino 3.4,210,0,1.800,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-01,2001,1,eastern_pacific,Eastern Pacific,250,0,1.771,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-02,2001,2,western_pacific,Western Pacific,145,0,0.430,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-02,2001,2,central_pacific,Central Pacific,190,0,1.964,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-02,2001,2,nino_34,Nino 3.4,210,0,1.718,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-02,2001,2,eastern_pacific,Eastern Pacific,250,0,1.343,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-03,2001,3,western_pacific,Western Pacific,145,0,0.573,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-03,2001,3,central_pacific,Central Pacific,190,0,1.885,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-03,2001,3,nino_34,Nino 3.4,210,0,1.964,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-03,2001,3,eastern_pacific,Eastern Pacific,250,0,1.084,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-04,2001,4,western_pacific,Western Pacific,145,0,0.504,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-04,2001,4,central_pacific,Central Pacific,190,0,2.266,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-04,2001,4,nino_34,Nino 3.4,210,0,1.907,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-04,2001,4,eastern_pacific,Eastern Pacific,250,0,0.687,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-05,2001,5,western_pacific,Western Pacific,145,0,0.643,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-05,2001,5,central_pacific,Central Pacific,190,0,2.204,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-05,2001,5,nino_34,Nino 3.4,210,0,2.547,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-05,2001,5,eastern_pacific,Eastern Pacific,250,0,0.602,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-06,2001,6,western_pacific,Western Pacific,145,0,0.377,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-06,2001,6,central_pacific,Central Pacific,190,0,2.166,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-06,2001,6,nino_34,Nino 3.4,210,0,2.464,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-06,2001,6,eastern_pacific,Eastern Pacific,250,0,0.477,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-07,2001,7,western_pacific,Western Pacific,145,0,0.286,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-07,2001,7,central_pacific,Central Pacific,190,0,2.431,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-07,2001,7,nino_34,Nino 3.4,210,0,0.987,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-07,2001,7,eastern_pacific,Eastern Pacific,250,0,0.324,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-08,2001,8,western_pacific,Western Pacific,145,0,0.120,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-08,2001,8,central_pacific,Central Pacific,190,0,1.216,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-08,2001,8,nino_34,Nino 3.4,210,0,0.715,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-08,2001,8,eastern_pacific,Eastern Pacific,250,0,0.311,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-09,2001,9,western_pacific,Western Pacific,145,0,0.050,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-09,2001,9,central_pacific,Central Pacific,190,0,0.686,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-09,2001,9,nino_34,Nino 3.4,210,0,0.739,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-09,2001,9,eastern_pacific,Eastern Pacific,250,0,0.835,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-10,2001,10,western_pacific,Western Pacific,145,0,0.476,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-10,2001,10,central_pacific,Central Pacific,190,0,0.708,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-10,2001,10,nino_34,Nino 3.4,210,0,0.938,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-10,2001,10,eastern_pacific,Eastern Pacific,250,0,0.981,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-11,2001,11,western_pacific,Western Pacific,145,0,0.801,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-11,2001,11,central_pacific,Central Pacific,190,0,1.075,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-11,2001,11,nino_34,Nino 3.4,210,0,1.081,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-11,2001,11,eastern_pacific,Eastern Pacific,250,0,1.553,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-12,2001,12,western_pacific,Western Pacific,145,0,-0.063,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-12,2001,12,central_pacific,Central Pacific,190,0,1.002,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-12,2001,12,nino_34,Nino 3.4,210,0,1.324,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2001-12,2001,12,eastern_pacific,Eastern Pacific,250,0,1.451,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-01,2002,1,western_pacific,Western Pacific,145,0,-0.238,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-01,2002,1,central_pacific,Central Pacific,190,0,1.883,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-01,2002,1,nino_34,Nino 3.4,210,0,1.642,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-01,2002,1,eastern_pacific,Eastern Pacific,250,0,1.969,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-02,2002,2,western_pacific,Western Pacific,145,0,0.089,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-02,2002,2,central_pacific,Central Pacific,190,0,2.132,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-02,2002,2,nino_34,Nino 3.4,210,0,2.440,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-02,2002,2,eastern_pacific,Eastern Pacific,250,0,1.565,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-03,2002,3,western_pacific,Western Pacific,145,0,0.269,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-03,2002,3,central_pacific,Central Pacific,190,0,1.922,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-03,2002,3,nino_34,Nino 3.4,210,0,2.020,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-03,2002,3,eastern_pacific,Eastern Pacific,250,0,2.090,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-04,2002,4,western_pacific,Western Pacific,145,0,0.530,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-04,2002,4,central_pacific,Central Pacific,190,0,1.579,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-04,2002,4,nino_34,Nino 3.4,210,0,2.234,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-04,2002,4,eastern_pacific,Eastern Pacific,250,0,2.682,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-05,2002,5,western_pacific,Western Pacific,145,0,0.499,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-05,2002,5,central_pacific,Central Pacific,190,0,0.994,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-05,2002,5,nino_34,Nino 3.4,210,0,1.731,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-05,2002,5,eastern_pacific,Eastern Pacific,250,0,0.669,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-06,2002,6,western_pacific,Western Pacific,145,0,0.151,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-06,2002,6,central_pacific,Central Pacific,190,0,1.072,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-06,2002,6,nino_34,Nino 3.4,210,0,0.153,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-06,2002,6,eastern_pacific,Eastern Pacific,250,0,0.050,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-07,2002,7,western_pacific,Western Pacific,145,0,0.309,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-07,2002,7,central_pacific,Central Pacific,190,0,1.062,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-07,2002,7,nino_34,Nino 3.4,210,0,0.410,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-07,2002,7,eastern_pacific,Eastern Pacific,250,0,-0.724,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-08,2002,8,western_pacific,Western Pacific,145,0,-0.016,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-08,2002,8,central_pacific,Central Pacific,190,0,-0.077,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-08,2002,8,nino_34,Nino 3.4,210,0,-0.643,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-08,2002,8,eastern_pacific,Eastern Pacific,250,0,-1.256,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-09,2002,9,western_pacific,Western Pacific,145,0,0.059,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-09,2002,9,central_pacific,Central Pacific,190,0,-0.163,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-09,2002,9,nino_34,Nino 3.4,210,0,-0.711,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-09,2002,9,eastern_pacific,Eastern Pacific,250,0,-1.631,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-10,2002,10,western_pacific,Western Pacific,145,0,0.581,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-10,2002,10,central_pacific,Central Pacific,190,0,-0.202,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-10,2002,10,nino_34,Nino 3.4,210,0,-0.797,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-10,2002,10,eastern_pacific,Eastern Pacific,250,0,-0.723,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-11,2002,11,western_pacific,Western Pacific,145,0,0.617,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-11,2002,11,central_pacific,Central Pacific,190,0,-0.930,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-11,2002,11,nino_34,Nino 3.4,210,0,-1.532,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-11,2002,11,eastern_pacific,Eastern Pacific,250,0,-1.071,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-12,2002,12,western_pacific,Western Pacific,145,0,0.259,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-12,2002,12,central_pacific,Central Pacific,190,0,-1.005,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-12,2002,12,nino_34,Nino 3.4,210,0,-1.450,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2002-12,2002,12,eastern_pacific,Eastern Pacific,250,0,-1.234,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-01,2003,1,western_pacific,Western Pacific,145,0,0.603,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-01,2003,1,central_pacific,Central Pacific,190,0,-0.851,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-01,2003,1,nino_34,Nino 3.4,210,0,-1.290,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-01,2003,1,eastern_pacific,Eastern Pacific,250,0,-1.348,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-02,2003,2,western_pacific,Western Pacific,145,0,0.796,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-02,2003,2,central_pacific,Central Pacific,190,0,-1.117,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-02,2003,2,nino_34,Nino 3.4,210,0,-1.094,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-02,2003,2,eastern_pacific,Eastern Pacific,250,0,-0.681,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-03,2003,3,western_pacific,Western Pacific,145,0,0.934,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-03,2003,3,central_pacific,Central Pacific,190,0,-0.849,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-03,2003,3,nino_34,Nino 3.4,210,0,-0.599,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-03,2003,3,eastern_pacific,Eastern Pacific,250,0,0.196,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-04,2003,4,western_pacific,Western Pacific,145,0,0.462,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-04,2003,4,central_pacific,Central Pacific,190,0,-0.369,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-04,2003,4,nino_34,Nino 3.4,210,0,-0.116,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-04,2003,4,eastern_pacific,Eastern Pacific,250,0,-0.317,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-05,2003,5,western_pacific,Western Pacific,145,0,0.688,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-05,2003,5,central_pacific,Central Pacific,190,0,-0.159,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-05,2003,5,nino_34,Nino 3.4,210,0,-0.350,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-05,2003,5,eastern_pacific,Eastern Pacific,250,0,-0.293,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-06,2003,6,western_pacific,Western Pacific,145,0,0.966,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-06,2003,6,central_pacific,Central Pacific,190,0,0.270,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-06,2003,6,nino_34,Nino 3.4,210,0,-0.032,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-06,2003,6,eastern_pacific,Eastern Pacific,250,0,-0.020,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-07,2003,7,western_pacific,Western Pacific,145,0,0.775,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-07,2003,7,central_pacific,Central Pacific,190,0,0.242,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-07,2003,7,nino_34,Nino 3.4,210,0,0.135,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-07,2003,7,eastern_pacific,Eastern Pacific,250,0,-0.041,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-08,2003,8,western_pacific,Western Pacific,145,0,0.822,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-08,2003,8,central_pacific,Central Pacific,190,0,0.238,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-08,2003,8,nino_34,Nino 3.4,210,0,0.405,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-08,2003,8,eastern_pacific,Eastern Pacific,250,0,0.402,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-09,2003,9,western_pacific,Western Pacific,145,0,1.165,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-09,2003,9,central_pacific,Central Pacific,190,0,0.342,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-09,2003,9,nino_34,Nino 3.4,210,0,0.515,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-09,2003,9,eastern_pacific,Eastern Pacific,250,0,0.786,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-10,2003,10,western_pacific,Western Pacific,145,0,0.687,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-10,2003,10,central_pacific,Central Pacific,190,0,0.548,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-10,2003,10,nino_34,Nino 3.4,210,0,0.651,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-10,2003,10,eastern_pacific,Eastern Pacific,250,0,0.422,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-11,2003,11,western_pacific,Western Pacific,145,0,0.183,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-11,2003,11,central_pacific,Central Pacific,190,0,0.766,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-11,2003,11,nino_34,Nino 3.4,210,0,0.786,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-11,2003,11,eastern_pacific,Eastern Pacific,250,0,0.745,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-12,2003,12,western_pacific,Western Pacific,145,0,0.298,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-12,2003,12,central_pacific,Central Pacific,190,0,0.907,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-12,2003,12,nino_34,Nino 3.4,210,0,0.728,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2003-12,2003,12,eastern_pacific,Eastern Pacific,250,0,1.224,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-01,2004,1,western_pacific,Western Pacific,145,0,0.117,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-01,2004,1,central_pacific,Central Pacific,190,0,0.606,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-01,2004,1,nino_34,Nino 3.4,210,0,0.532,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-01,2004,1,eastern_pacific,Eastern Pacific,250,0,0.983,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-02,2004,2,western_pacific,Western Pacific,145,0,0.322,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-02,2004,2,central_pacific,Central Pacific,190,0,0.843,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-02,2004,2,nino_34,Nino 3.4,210,0,0.734,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-02,2004,2,eastern_pacific,Eastern Pacific,250,0,0.721,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-03,2004,3,western_pacific,Western Pacific,145,0,0.837,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-03,2004,3,central_pacific,Central Pacific,190,0,0.972,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-03,2004,3,nino_34,Nino 3.4,210,0,0.377,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-03,2004,3,eastern_pacific,Eastern Pacific,250,0,0.737,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-04,2004,4,western_pacific,Western Pacific,145,0,0.378,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-04,2004,4,central_pacific,Central Pacific,190,0,0.754,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-04,2004,4,nino_34,Nino 3.4,210,0,0.588,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-04,2004,4,eastern_pacific,Eastern Pacific,250,0,0.609,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-05,2004,5,western_pacific,Western Pacific,145,0,0.157,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-05,2004,5,central_pacific,Central Pacific,190,0,1.060,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-05,2004,5,nino_34,Nino 3.4,210,0,0.628,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-05,2004,5,eastern_pacific,Eastern Pacific,250,0,0.091,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-06,2004,6,western_pacific,Western Pacific,145,0,0.630,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-06,2004,6,central_pacific,Central Pacific,190,0,0.883,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-06,2004,6,nino_34,Nino 3.4,210,0,0.243,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-06,2004,6,eastern_pacific,Eastern Pacific,250,0,-0.308,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-07,2004,7,western_pacific,Western Pacific,145,0,0.691,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-07,2004,7,central_pacific,Central Pacific,190,0,-0.288,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-07,2004,7,nino_34,Nino 3.4,210,0,-0.524,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-07,2004,7,eastern_pacific,Eastern Pacific,250,0,-1.448,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-08,2004,8,western_pacific,Western Pacific,145,0,0.583,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-08,2004,8,central_pacific,Central Pacific,190,0,-0.855,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-08,2004,8,nino_34,Nino 3.4,210,0,-1.169,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-08,2004,8,eastern_pacific,Eastern Pacific,250,0,-2.536,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-09,2004,9,western_pacific,Western Pacific,145,0,0.653,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-09,2004,9,central_pacific,Central Pacific,190,0,-1.128,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-09,2004,9,nino_34,Nino 3.4,210,0,-1.820,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-09,2004,9,eastern_pacific,Eastern Pacific,250,0,-2.635,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-10,2004,10,western_pacific,Western Pacific,145,0,0.358,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-10,2004,10,central_pacific,Central Pacific,190,0,-0.916,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-10,2004,10,nino_34,Nino 3.4,210,0,-1.386,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-10,2004,10,eastern_pacific,Eastern Pacific,250,0,-2.072,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-11,2004,11,western_pacific,Western Pacific,145,0,0.588,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-11,2004,11,central_pacific,Central Pacific,190,0,-1.133,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-11,2004,11,nino_34,Nino 3.4,210,0,-1.791,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-11,2004,11,eastern_pacific,Eastern Pacific,250,0,-1.252,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-12,2004,12,western_pacific,Western Pacific,145,0,0.638,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-12,2004,12,central_pacific,Central Pacific,190,0,-1.451,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-12,2004,12,nino_34,Nino 3.4,210,0,-2.056,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2004-12,2004,12,eastern_pacific,Eastern Pacific,250,0,-1.605,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-01,2005,1,western_pacific,Western Pacific,145,0,0.849,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-01,2005,1,central_pacific,Central Pacific,190,0,-1.958,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-01,2005,1,nino_34,Nino 3.4,210,0,-2.028,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-01,2005,1,eastern_pacific,Eastern Pacific,250,0,-1.774,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-02,2005,2,western_pacific,Western Pacific,145,0,0.550,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-02,2005,2,central_pacific,Central Pacific,190,0,-1.969,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-02,2005,2,nino_34,Nino 3.4,210,0,-1.608,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-02,2005,2,eastern_pacific,Eastern Pacific,250,0,-1.032,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-03,2005,3,western_pacific,Western Pacific,145,0,1.038,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-03,2005,3,central_pacific,Central Pacific,190,0,-1.333,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-03,2005,3,nino_34,Nino 3.4,210,0,-1.005,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-03,2005,3,eastern_pacific,Eastern Pacific,250,0,-0.660,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-04,2005,4,western_pacific,Western Pacific,145,0,1.001,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-04,2005,4,central_pacific,Central Pacific,190,0,-0.494,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-04,2005,4,nino_34,Nino 3.4,210,0,-0.573,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-04,2005,4,eastern_pacific,Eastern Pacific,250,0,-0.477,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-05,2005,5,western_pacific,Western Pacific,145,0,0.993,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-05,2005,5,central_pacific,Central Pacific,190,0,-0.686,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-05,2005,5,nino_34,Nino 3.4,210,0,-0.681,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-05,2005,5,eastern_pacific,Eastern Pacific,250,0,-0.238,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-06,2005,6,western_pacific,Western Pacific,145,0,0.697,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-06,2005,6,central_pacific,Central Pacific,190,0,-0.837,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-06,2005,6,nino_34,Nino 3.4,210,0,-0.373,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-06,2005,6,eastern_pacific,Eastern Pacific,250,0,0.156,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-07,2005,7,western_pacific,Western Pacific,145,0,0.746,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-07,2005,7,central_pacific,Central Pacific,190,0,-0.704,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-07,2005,7,nino_34,Nino 3.4,210,0,-0.114,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-07,2005,7,eastern_pacific,Eastern Pacific,250,0,0.447,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-08,2005,8,western_pacific,Western Pacific,145,0,0.471,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-08,2005,8,central_pacific,Central Pacific,190,0,-0.753,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-08,2005,8,nino_34,Nino 3.4,210,0,-0.107,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-08,2005,8,eastern_pacific,Eastern Pacific,250,0,0.510,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-09,2005,9,western_pacific,Western Pacific,145,0,0.095,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-09,2005,9,central_pacific,Central Pacific,190,0,-0.481,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-09,2005,9,nino_34,Nino 3.4,210,0,-0.115,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-09,2005,9,eastern_pacific,Eastern Pacific,250,0,0.438,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-10,2005,10,western_pacific,Western Pacific,145,0,-0.309,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-10,2005,10,central_pacific,Central Pacific,190,0,-0.063,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-10,2005,10,nino_34,Nino 3.4,210,0,-0.184,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-10,2005,10,eastern_pacific,Eastern Pacific,250,0,0.140,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-11,2005,11,western_pacific,Western Pacific,145,0,-0.061,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-11,2005,11,central_pacific,Central Pacific,190,0,0.102,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-11,2005,11,nino_34,Nino 3.4,210,0,0.210,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-11,2005,11,eastern_pacific,Eastern Pacific,250,0,0.015,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-12,2005,12,western_pacific,Western Pacific,145,0,-0.194,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-12,2005,12,central_pacific,Central Pacific,190,0,0.113,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-12,2005,12,nino_34,Nino 3.4,210,0,0.329,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2005-12,2005,12,eastern_pacific,Eastern Pacific,250,0,0.200,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-01,2006,1,western_pacific,Western Pacific,145,0,-0.016,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-01,2006,1,central_pacific,Central Pacific,190,0,0.521,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-01,2006,1,nino_34,Nino 3.4,210,0,0.475,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-01,2006,1,eastern_pacific,Eastern Pacific,250,0,0.200,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-02,2006,2,western_pacific,Western Pacific,145,0,0.224,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-02,2006,2,central_pacific,Central Pacific,190,0,0.676,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-02,2006,2,nino_34,Nino 3.4,210,0,0.050,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-02,2006,2,eastern_pacific,Eastern Pacific,250,0,0.219,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-03,2006,3,western_pacific,Western Pacific,145,0,0.522,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-03,2006,3,central_pacific,Central Pacific,190,0,0.568,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-03,2006,3,nino_34,Nino 3.4,210,0,0.607,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-03,2006,3,eastern_pacific,Eastern Pacific,250,0,0.087,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-04,2006,4,western_pacific,Western Pacific,145,0,0.481,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-04,2006,4,central_pacific,Central Pacific,190,0,1.130,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-04,2006,4,nino_34,Nino 3.4,210,0,1.164,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-04,2006,4,eastern_pacific,Eastern Pacific,250,0,0.445,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-05,2006,5,western_pacific,Western Pacific,145,0,0.346,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-05,2006,5,central_pacific,Central Pacific,190,0,1.572,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-05,2006,5,nino_34,Nino 3.4,210,0,1.839,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-05,2006,5,eastern_pacific,Eastern Pacific,250,0,1.574,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-06,2006,6,western_pacific,Western Pacific,145,0,0.434,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-06,2006,6,central_pacific,Central Pacific,190,0,1.982,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-06,2006,6,nino_34,Nino 3.4,210,0,2.275,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-06,2006,6,eastern_pacific,Eastern Pacific,250,0,2.356,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-07,2006,7,western_pacific,Western Pacific,145,0,0.163,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-07,2006,7,central_pacific,Central Pacific,190,0,2.323,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-07,2006,7,nino_34,Nino 3.4,210,0,2.426,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-07,2006,7,eastern_pacific,Eastern Pacific,250,0,2.288,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-08,2006,8,western_pacific,Western Pacific,145,0,-0.186,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-08,2006,8,central_pacific,Central Pacific,190,0,2.581,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-08,2006,8,nino_34,Nino 3.4,210,0,2.238,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-08,2006,8,eastern_pacific,Eastern Pacific,250,0,2.741,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-09,2006,9,western_pacific,Western Pacific,145,0,-0.548,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-09,2006,9,central_pacific,Central Pacific,190,0,2.314,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-09,2006,9,nino_34,Nino 3.4,210,0,2.003,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-09,2006,9,eastern_pacific,Eastern Pacific,250,0,2.960,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-10,2006,10,western_pacific,Western Pacific,145,0,-0.431,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-10,2006,10,central_pacific,Central Pacific,190,0,2.159,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-10,2006,10,nino_34,Nino 3.4,210,0,2.735,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-10,2006,10,eastern_pacific,Eastern Pacific,250,0,3.229,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-11,2006,11,western_pacific,Western Pacific,145,0,0.163,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-11,2006,11,central_pacific,Central Pacific,190,0,2.675,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-11,2006,11,nino_34,Nino 3.4,210,0,3.122,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-11,2006,11,eastern_pacific,Eastern Pacific,250,0,3.102,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-12,2006,12,western_pacific,Western Pacific,145,0,-0.294,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-12,2006,12,central_pacific,Central Pacific,190,0,3.204,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-12,2006,12,nino_34,Nino 3.4,210,0,3.653,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2006-12,2006,12,eastern_pacific,Eastern Pacific,250,0,3.216,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-01,2007,1,western_pacific,Western Pacific,145,0,-0.259,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-01,2007,1,central_pacific,Central Pacific,190,0,3.538,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-01,2007,1,nino_34,Nino 3.4,210,0,4.219,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-01,2007,1,eastern_pacific,Eastern Pacific,250,0,3.098,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-02,2007,2,western_pacific,Western Pacific,145,0,-0.198,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-02,2007,2,central_pacific,Central Pacific,190,0,3.654,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-02,2007,2,nino_34,Nino 3.4,210,0,3.813,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-02,2007,2,eastern_pacific,Eastern Pacific,250,0,3.063,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-03,2007,3,western_pacific,Western Pacific,145,0,0.016,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-03,2007,3,central_pacific,Central Pacific,190,0,3.114,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-03,2007,3,nino_34,Nino 3.4,210,0,2.831,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-03,2007,3,eastern_pacific,Eastern Pacific,250,0,3.517,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-04,2007,4,western_pacific,Western Pacific,145,0,0.401,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-04,2007,4,central_pacific,Central Pacific,190,0,1.555,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-04,2007,4,nino_34,Nino 3.4,210,0,1.511,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-04,2007,4,eastern_pacific,Eastern Pacific,250,0,4.000,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-05,2007,5,western_pacific,Western Pacific,145,0,0.485,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-05,2007,5,central_pacific,Central Pacific,190,0,0.531,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-05,2007,5,nino_34,Nino 3.4,210,0,1.107,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-05,2007,5,eastern_pacific,Eastern Pacific,250,0,2.011,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-06,2007,6,western_pacific,Western Pacific,145,0,0.453,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-06,2007,6,central_pacific,Central Pacific,190,0,0.247,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-06,2007,6,nino_34,Nino 3.4,210,0,-0.490,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-06,2007,6,eastern_pacific,Eastern Pacific,250,0,-0.085,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-07,2007,7,western_pacific,Western Pacific,145,0,0.501,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-07,2007,7,central_pacific,Central Pacific,190,0,-1.165,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-07,2007,7,nino_34,Nino 3.4,210,0,-1.814,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-07,2007,7,eastern_pacific,Eastern Pacific,250,0,-0.443,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-08,2007,8,western_pacific,Western Pacific,145,0,0.608,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-08,2007,8,central_pacific,Central Pacific,190,0,-1.495,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-08,2007,8,nino_34,Nino 3.4,210,0,-1.786,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-08,2007,8,eastern_pacific,Eastern Pacific,250,0,-0.118,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-09,2007,9,western_pacific,Western Pacific,145,0,0.098,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-09,2007,9,central_pacific,Central Pacific,190,0,-1.174,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-09,2007,9,nino_34,Nino 3.4,210,0,-1.375,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-09,2007,9,eastern_pacific,Eastern Pacific,250,0,-1.802,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-10,2007,10,western_pacific,Western Pacific,145,0,-0.560,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-10,2007,10,central_pacific,Central Pacific,190,0,-1.723,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-10,2007,10,nino_34,Nino 3.4,210,0,-1.418,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-10,2007,10,eastern_pacific,Eastern Pacific,250,0,-2.000,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-11,2007,11,western_pacific,Western Pacific,145,0,-0.636,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-11,2007,11,central_pacific,Central Pacific,190,0,-2.213,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-11,2007,11,nino_34,Nino 3.4,210,0,-2.547,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-11,2007,11,eastern_pacific,Eastern Pacific,250,0,-2.514,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-12,2007,12,western_pacific,Western Pacific,145,0,-0.637,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-12,2007,12,central_pacific,Central Pacific,190,0,-2.772,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-12,2007,12,nino_34,Nino 3.4,210,0,-2.810,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2007-12,2007,12,eastern_pacific,Eastern Pacific,250,0,-2.385,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-01,2008,1,western_pacific,Western Pacific,145,0,-0.651,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-01,2008,1,central_pacific,Central Pacific,190,0,-2.963,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-01,2008,1,nino_34,Nino 3.4,210,0,-2.782,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-01,2008,1,eastern_pacific,Eastern Pacific,250,0,-1.803,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-02,2008,2,western_pacific,Western Pacific,145,0,-1.015,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-02,2008,2,central_pacific,Central Pacific,190,0,-2.452,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-02,2008,2,nino_34,Nino 3.4,210,0,-2.487,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-02,2008,2,eastern_pacific,Eastern Pacific,250,0,-2.133,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-03,2008,3,western_pacific,Western Pacific,145,0,-1.203,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-03,2008,3,central_pacific,Central Pacific,190,0,-2.220,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-03,2008,3,nino_34,Nino 3.4,210,0,-2.234,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-03,2008,3,eastern_pacific,Eastern Pacific,250,0,-3.286,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-04,2008,4,western_pacific,Western Pacific,145,0,-0.913,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-04,2008,4,central_pacific,Central Pacific,190,0,-2.124,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-04,2008,4,nino_34,Nino 3.4,210,0,-2.369,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-04,2008,4,eastern_pacific,Eastern Pacific,250,0,-2.869,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-05,2008,5,western_pacific,Western Pacific,145,0,-0.861,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-05,2008,5,central_pacific,Central Pacific,190,0,-2.114,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-05,2008,5,nino_34,Nino 3.4,210,0,-2.216,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-05,2008,5,eastern_pacific,Eastern Pacific,250,0,-1.938,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-06,2008,6,western_pacific,Western Pacific,145,0,-1.228,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-06,2008,6,central_pacific,Central Pacific,190,0,-2.155,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-06,2008,6,nino_34,Nino 3.4,210,0,-1.590,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-06,2008,6,eastern_pacific,Eastern Pacific,250,0,-0.721,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-07,2008,7,western_pacific,Western Pacific,145,0,-1.192,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-07,2008,7,central_pacific,Central Pacific,190,0,-1.792,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-07,2008,7,nino_34,Nino 3.4,210,0,-0.929,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-07,2008,7,eastern_pacific,Eastern Pacific,250,0,0.131,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-08,2008,8,western_pacific,Western Pacific,145,0,-1.096,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-08,2008,8,central_pacific,Central Pacific,190,0,-1.427,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-08,2008,8,nino_34,Nino 3.4,210,0,-0.839,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-08,2008,8,eastern_pacific,Eastern Pacific,250,0,-0.339,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-09,2008,9,western_pacific,Western Pacific,145,0,-1.346,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-09,2008,9,central_pacific,Central Pacific,190,0,-1.474,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-09,2008,9,nino_34,Nino 3.4,210,0,-1.183,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-09,2008,9,eastern_pacific,Eastern Pacific,250,0,-1.133,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-10,2008,10,western_pacific,Western Pacific,145,0,-1.422,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-10,2008,10,central_pacific,Central Pacific,190,0,-1.736,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-10,2008,10,nino_34,Nino 3.4,210,0,-1.777,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-10,2008,10,eastern_pacific,Eastern Pacific,250,0,-1.823,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-11,2008,11,western_pacific,Western Pacific,145,0,-1.263,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-11,2008,11,central_pacific,Central Pacific,190,0,-1.877,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-11,2008,11,nino_34,Nino 3.4,210,0,-2.012,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-11,2008,11,eastern_pacific,Eastern Pacific,250,0,-1.703,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-12,2008,12,western_pacific,Western Pacific,145,0,-0.712,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-12,2008,12,central_pacific,Central Pacific,190,0,-2.287,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-12,2008,12,nino_34,Nino 3.4,210,0,-2.250,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2008-12,2008,12,eastern_pacific,Eastern Pacific,250,0,-2.191,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-01,2009,1,western_pacific,Western Pacific,145,0,-0.153,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-01,2009,1,central_pacific,Central Pacific,190,0,-1.960,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-01,2009,1,nino_34,Nino 3.4,210,0,-1.948,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-01,2009,1,eastern_pacific,Eastern Pacific,250,0,-1.259,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-02,2009,2,western_pacific,Western Pacific,145,0,0.325,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-02,2009,2,central_pacific,Central Pacific,190,0,-1.474,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-02,2009,2,nino_34,Nino 3.4,210,0,-1.623,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-02,2009,2,eastern_pacific,Eastern Pacific,250,0,-1.273,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-03,2009,3,western_pacific,Western Pacific,145,0,-0.075,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-03,2009,3,central_pacific,Central Pacific,190,0,-1.181,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-03,2009,3,nino_34,Nino 3.4,210,0,-1.353,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-03,2009,3,eastern_pacific,Eastern Pacific,250,0,-0.416,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-04,2009,4,western_pacific,Western Pacific,145,0,-0.332,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-04,2009,4,central_pacific,Central Pacific,190,0,-0.912,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-04,2009,4,nino_34,Nino 3.4,210,0,-0.614,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-04,2009,4,eastern_pacific,Eastern Pacific,250,0,-0.158,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-05,2009,5,western_pacific,Western Pacific,145,0,-0.060,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-05,2009,5,central_pacific,Central Pacific,190,0,-0.462,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-05,2009,5,nino_34,Nino 3.4,210,0,-0.635,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-05,2009,5,eastern_pacific,Eastern Pacific,250,0,0.560,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-06,2009,6,western_pacific,Western Pacific,145,0,0.079,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-06,2009,6,central_pacific,Central Pacific,190,0,-0.509,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-06,2009,6,nino_34,Nino 3.4,210,0,-0.065,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-06,2009,6,eastern_pacific,Eastern Pacific,250,0,0.932,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-07,2009,7,western_pacific,Western Pacific,145,0,0.513,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-07,2009,7,central_pacific,Central Pacific,190,0,-0.182,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-07,2009,7,nino_34,Nino 3.4,210,0,0.526,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-07,2009,7,eastern_pacific,Eastern Pacific,250,0,1.475,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-08,2009,8,western_pacific,Western Pacific,145,0,0.524,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-08,2009,8,central_pacific,Central Pacific,190,0,0.226,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-08,2009,8,nino_34,Nino 3.4,210,0,0.982,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-08,2009,8,eastern_pacific,Eastern Pacific,250,0,2.074,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-09,2009,9,western_pacific,Western Pacific,145,0,0.310,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-09,2009,9,central_pacific,Central Pacific,190,0,0.676,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-09,2009,9,nino_34,Nino 3.4,210,0,1.131,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-09,2009,9,eastern_pacific,Eastern Pacific,250,0,2.912,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-10,2009,10,western_pacific,Western Pacific,145,0,0.514,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-10,2009,10,central_pacific,Central Pacific,190,0,0.624,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-10,2009,10,nino_34,Nino 3.4,210,0,1.281,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-10,2009,10,eastern_pacific,Eastern Pacific,250,0,2.351,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-11,2009,11,western_pacific,Western Pacific,145,0,0.065,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-11,2009,11,central_pacific,Central Pacific,190,0,0.798,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-11,2009,11,nino_34,Nino 3.4,210,0,1.265,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-11,2009,11,eastern_pacific,Eastern Pacific,250,0,2.101,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-12,2009,12,western_pacific,Western Pacific,145,0,0.002,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-12,2009,12,central_pacific,Central Pacific,190,0,1.136,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-12,2009,12,nino_34,Nino 3.4,210,0,1.329,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2009-12,2009,12,eastern_pacific,Eastern Pacific,250,0,1.785,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-01,2010,1,western_pacific,Western Pacific,145,0,0.095,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-01,2010,1,central_pacific,Central Pacific,190,0,1.569,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-01,2010,1,nino_34,Nino 3.4,210,0,1.779,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-01,2010,1,eastern_pacific,Eastern Pacific,250,0,1.685,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-02,2010,2,western_pacific,Western Pacific,145,0,-0.033,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-02,2010,2,central_pacific,Central Pacific,190,0,1.767,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-02,2010,2,nino_34,Nino 3.4,210,0,1.387,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-02,2010,2,eastern_pacific,Eastern Pacific,250,0,1.047,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-03,2010,3,western_pacific,Western Pacific,145,0,0.208,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-03,2010,3,central_pacific,Central Pacific,190,0,1.189,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-03,2010,3,nino_34,Nino 3.4,210,0,0.498,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-03,2010,3,eastern_pacific,Eastern Pacific,250,0,-0.127,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-04,2010,4,western_pacific,Western Pacific,145,0,0.205,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-04,2010,4,central_pacific,Central Pacific,190,0,0.896,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-04,2010,4,nino_34,Nino 3.4,210,0,-0.094,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-04,2010,4,eastern_pacific,Eastern Pacific,250,0,-0.181,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-05,2010,5,western_pacific,Western Pacific,145,0,-0.105,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-05,2010,5,central_pacific,Central Pacific,190,0,0.416,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-05,2010,5,nino_34,Nino 3.4,210,0,0.100,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-05,2010,5,eastern_pacific,Eastern Pacific,250,0,0.108,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-06,2010,6,western_pacific,Western Pacific,145,0,-0.086,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-06,2010,6,central_pacific,Central Pacific,190,0,0.629,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-06,2010,6,nino_34,Nino 3.4,210,0,-0.409,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-06,2010,6,eastern_pacific,Eastern Pacific,250,0,-0.136,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-07,2010,7,western_pacific,Western Pacific,145,0,0.156,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-07,2010,7,central_pacific,Central Pacific,190,0,0.429,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-07,2010,7,nino_34,Nino 3.4,210,0,0.173,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-07,2010,7,eastern_pacific,Eastern Pacific,250,0,-0.996,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-08,2010,8,western_pacific,Western Pacific,145,0,0.151,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-08,2010,8,central_pacific,Central Pacific,190,0,-0.464,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-08,2010,8,nino_34,Nino 3.4,210,0,-0.443,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-08,2010,8,eastern_pacific,Eastern Pacific,250,0,-0.375,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-09,2010,9,western_pacific,Western Pacific,145,0,0.306,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-09,2010,9,central_pacific,Central Pacific,190,0,-0.221,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-09,2010,9,nino_34,Nino 3.4,210,0,-0.246,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-09,2010,9,eastern_pacific,Eastern Pacific,250,0,-1.699,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-10,2010,10,western_pacific,Western Pacific,145,0,0.279,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-10,2010,10,central_pacific,Central Pacific,190,0,-0.501,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-10,2010,10,nino_34,Nino 3.4,210,0,-0.965,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-10,2010,10,eastern_pacific,Eastern Pacific,250,0,-1.766,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-11,2010,11,western_pacific,Western Pacific,145,0,0.444,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-11,2010,11,central_pacific,Central Pacific,190,0,-0.637,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-11,2010,11,nino_34,Nino 3.4,210,0,-0.917,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-11,2010,11,eastern_pacific,Eastern Pacific,250,0,-1.417,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-12,2010,12,western_pacific,Western Pacific,145,0,0.635,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-12,2010,12,central_pacific,Central Pacific,190,0,-0.666,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-12,2010,12,nino_34,Nino 3.4,210,0,-0.939,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2010-12,2010,12,eastern_pacific,Eastern Pacific,250,0,-1.625,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-01,2011,1,western_pacific,Western Pacific,145,0,0.930,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-01,2011,1,central_pacific,Central Pacific,190,0,-0.722,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-01,2011,1,nino_34,Nino 3.4,210,0,-1.071,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-01,2011,1,eastern_pacific,Eastern Pacific,250,0,-1.246,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-02,2011,2,western_pacific,Western Pacific,145,0,0.863,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-02,2011,2,central_pacific,Central Pacific,190,0,-0.595,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-02,2011,2,nino_34,Nino 3.4,210,0,-1.374,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-02,2011,2,eastern_pacific,Eastern Pacific,250,0,-1.152,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-03,2011,3,western_pacific,Western Pacific,145,0,0.595,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-03,2011,3,central_pacific,Central Pacific,190,0,-1.278,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-03,2011,3,nino_34,Nino 3.4,210,0,-1.056,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-03,2011,3,eastern_pacific,Eastern Pacific,250,0,-0.313,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-04,2011,4,western_pacific,Western Pacific,145,0,0.496,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-04,2011,4,central_pacific,Central Pacific,190,0,-1.085,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-04,2011,4,nino_34,Nino 3.4,210,0,-0.733,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-04,2011,4,eastern_pacific,Eastern Pacific,250,0,0.227,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-05,2011,5,western_pacific,Western Pacific,145,0,0.479,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-05,2011,5,central_pacific,Central Pacific,190,0,-0.514,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-05,2011,5,nino_34,Nino 3.4,210,0,-0.501,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-05,2011,5,eastern_pacific,Eastern Pacific,250,0,0.327,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-06,2011,6,western_pacific,Western Pacific,145,0,0.742,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-06,2011,6,central_pacific,Central Pacific,190,0,-0.042,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-06,2011,6,nino_34,Nino 3.4,210,0,-0.018,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-06,2011,6,eastern_pacific,Eastern Pacific,250,0,0.495,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-07,2011,7,western_pacific,Western Pacific,145,0,0.615,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-07,2011,7,central_pacific,Central Pacific,190,0,0.133,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-07,2011,7,nino_34,Nino 3.4,210,0,0.488,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-07,2011,7,eastern_pacific,Eastern Pacific,250,0,1.469,Neutral,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-08,2011,8,western_pacific,Western Pacific,145,0,0.742,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-08,2011,8,central_pacific,Central Pacific,190,0,0.501,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-08,2011,8,nino_34,Nino 3.4,210,0,1.158,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-08,2011,8,eastern_pacific,Eastern Pacific,250,0,1.394,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-09,2011,9,western_pacific,Western Pacific,145,0,1.110,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-09,2011,9,central_pacific,Central Pacific,190,0,0.775,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-09,2011,9,nino_34,Nino 3.4,210,0,1.436,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-09,2011,9,eastern_pacific,Eastern Pacific,250,0,1.639,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-10,2011,10,western_pacific,Western Pacific,145,0,1.097,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-10,2011,10,central_pacific,Central Pacific,190,0,0.595,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-10,2011,10,nino_34,Nino 3.4,210,0,1.067,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-10,2011,10,eastern_pacific,Eastern Pacific,250,0,1.724,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-11,2011,11,western_pacific,Western Pacific,145,0,0.776,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-11,2011,11,central_pacific,Central Pacific,190,0,1.244,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-11,2011,11,nino_34,Nino 3.4,210,0,1.742,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-11,2011,11,eastern_pacific,Eastern Pacific,250,0,1.793,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-12,2011,12,western_pacific,Western Pacific,145,0,0.848,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-12,2011,12,central_pacific,Central Pacific,190,0,1.112,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-12,2011,12,nino_34,Nino 3.4,210,0,1.634,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2011-12,2011,12,eastern_pacific,Eastern Pacific,250,0,1.333,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-01,2012,1,western_pacific,Western Pacific,145,0,0.141,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-01,2012,1,central_pacific,Central Pacific,190,0,1.756,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-01,2012,1,nino_34,Nino 3.4,210,0,1.501,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-01,2012,1,eastern_pacific,Eastern Pacific,250,0,0.973,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-02,2012,2,western_pacific,Western Pacific,145,0,-0.101,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-02,2012,2,central_pacific,Central Pacific,190,0,2.140,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-02,2012,2,nino_34,Nino 3.4,210,0,1.583,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-02,2012,2,eastern_pacific,Eastern Pacific,250,0,0.124,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-03,2012,3,western_pacific,Western Pacific,145,0,0.804,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-03,2012,3,central_pacific,Central Pacific,190,0,2.367,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-03,2012,3,nino_34,Nino 3.4,210,0,1.508,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-03,2012,3,eastern_pacific,Eastern Pacific,250,0,1.578,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-04,2012,4,western_pacific,Western Pacific,145,0,1.038,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-04,2012,4,central_pacific,Central Pacific,190,0,2.406,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-04,2012,4,nino_34,Nino 3.4,210,0,2.055,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-04,2012,4,eastern_pacific,Eastern Pacific,250,0,1.869,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-05,2012,5,western_pacific,Western Pacific,145,0,1.110,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-05,2012,5,central_pacific,Central Pacific,190,0,2.333,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-05,2012,5,nino_34,Nino 3.4,210,0,2.313,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-05,2012,5,eastern_pacific,Eastern Pacific,250,0,2.801,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-06,2012,6,western_pacific,Western Pacific,145,0,1.125,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-06,2012,6,central_pacific,Central Pacific,190,0,1.914,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-06,2012,6,nino_34,Nino 3.4,210,0,3.153,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-06,2012,6,eastern_pacific,Eastern Pacific,250,0,3.070,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-07,2012,7,western_pacific,Western Pacific,145,0,0.596,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-07,2012,7,central_pacific,Central Pacific,190,0,2.389,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-07,2012,7,nino_34,Nino 3.4,210,0,3.482,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-07,2012,7,eastern_pacific,Eastern Pacific,250,0,3.530,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-08,2012,8,western_pacific,Western Pacific,145,0,0.212,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-08,2012,8,central_pacific,Central Pacific,190,0,3.206,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-08,2012,8,nino_34,Nino 3.4,210,0,3.312,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-08,2012,8,eastern_pacific,Eastern Pacific,250,0,3.688,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-09,2012,9,western_pacific,Western Pacific,145,0,-0.174,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-09,2012,9,central_pacific,Central Pacific,190,0,3.158,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-09,2012,9,nino_34,Nino 3.4,210,0,2.957,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-09,2012,9,eastern_pacific,Eastern Pacific,250,0,4.031,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-10,2012,10,western_pacific,Western Pacific,145,0,0.053,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-10,2012,10,central_pacific,Central Pacific,190,0,2.959,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-10,2012,10,nino_34,Nino 3.4,210,0,3.029,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-10,2012,10,eastern_pacific,Eastern Pacific,250,0,3.668,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-11,2012,11,western_pacific,Western Pacific,145,0,-0.038,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-11,2012,11,central_pacific,Central Pacific,190,0,3.331,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-11,2012,11,nino_34,Nino 3.4,210,0,3.448,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-11,2012,11,eastern_pacific,Eastern Pacific,250,0,3.558,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-12,2012,12,western_pacific,Western Pacific,145,0,0.157,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-12,2012,12,central_pacific,Central Pacific,190,0,3.332,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-12,2012,12,nino_34,Nino 3.4,210,0,3.601,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2012-12,2012,12,eastern_pacific,Eastern Pacific,250,0,3.758,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-01,2013,1,western_pacific,Western Pacific,145,0,0.119,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-01,2013,1,central_pacific,Central Pacific,190,0,3.340,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-01,2013,1,nino_34,Nino 3.4,210,0,3.790,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-01,2013,1,eastern_pacific,Eastern Pacific,250,0,3.851,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-02,2013,2,western_pacific,Western Pacific,145,0,0.310,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-02,2013,2,central_pacific,Central Pacific,190,0,2.888,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-02,2013,2,nino_34,Nino 3.4,210,0,2.521,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-02,2013,2,eastern_pacific,Eastern Pacific,250,0,3.345,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-03,2013,3,western_pacific,Western Pacific,145,0,-0.103,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-03,2013,3,central_pacific,Central Pacific,190,0,1.232,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-03,2013,3,nino_34,Nino 3.4,210,0,1.421,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-03,2013,3,eastern_pacific,Eastern Pacific,250,0,3.551,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-04,2013,4,western_pacific,Western Pacific,145,0,-0.155,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-04,2013,4,central_pacific,Central Pacific,190,0,0.725,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-04,2013,4,nino_34,Nino 3.4,210,0,1.226,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-04,2013,4,eastern_pacific,Eastern Pacific,250,0,3.334,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-05,2013,5,western_pacific,Western Pacific,145,0,-0.028,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-05,2013,5,central_pacific,Central Pacific,190,0,0.287,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-05,2013,5,nino_34,Nino 3.4,210,0,1.454,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-05,2013,5,eastern_pacific,Eastern Pacific,250,0,0.093,El Niño,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-06,2013,6,western_pacific,Western Pacific,145,0,0.089,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-06,2013,6,central_pacific,Central Pacific,190,0,-0.210,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-06,2013,6,nino_34,Nino 3.4,210,0,-0.916,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-06,2013,6,eastern_pacific,Eastern Pacific,250,0,-1.943,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-07,2013,7,western_pacific,Western Pacific,145,0,0.514,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-07,2013,7,central_pacific,Central Pacific,190,0,-1.167,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-07,2013,7,nino_34,Nino 3.4,210,0,-2.147,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-07,2013,7,eastern_pacific,Eastern Pacific,250,0,-1.828,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-08,2013,8,western_pacific,Western Pacific,145,0,0.669,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-08,2013,8,central_pacific,Central Pacific,190,0,-1.776,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-08,2013,8,nino_34,Nino 3.4,210,0,-1.967,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-08,2013,8,eastern_pacific,Eastern Pacific,250,0,-1.827,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-09,2013,9,western_pacific,Western Pacific,145,0,-0.266,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-09,2013,9,central_pacific,Central Pacific,190,0,-2.831,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-09,2013,9,nino_34,Nino 3.4,210,0,-3.735,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-09,2013,9,eastern_pacific,Eastern Pacific,250,0,-2.134,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-10,2013,10,western_pacific,Western Pacific,145,0,-0.884,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-10,2013,10,central_pacific,Central Pacific,190,0,-1.960,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-10,2013,10,nino_34,Nino 3.4,210,0,-2.968,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-10,2013,10,eastern_pacific,Eastern Pacific,250,0,-2.793,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-11,2013,11,western_pacific,Western Pacific,145,0,-0.549,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-11,2013,11,central_pacific,Central Pacific,190,0,-2.767,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-11,2013,11,nino_34,Nino 3.4,210,0,-2.650,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-11,2013,11,eastern_pacific,Eastern Pacific,250,0,-2.525,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-12,2013,12,western_pacific,Western Pacific,145,0,-0.265,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-12,2013,12,central_pacific,Central Pacific,190,0,-2.936,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-12,2013,12,nino_34,Nino 3.4,210,0,-2.419,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2013-12,2013,12,eastern_pacific,Eastern Pacific,250,0,-2.108,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-01,2014,1,western_pacific,Western Pacific,145,0,-0.314,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-01,2014,1,central_pacific,Central Pacific,190,0,-3.126,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-01,2014,1,nino_34,Nino 3.4,210,0,-2.084,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-01,2014,1,eastern_pacific,Eastern Pacific,250,0,-1.280,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-02,2014,2,western_pacific,Western Pacific,145,0,-0.069,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-02,2014,2,central_pacific,Central Pacific,190,0,-2.682,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-02,2014,2,nino_34,Nino 3.4,210,0,-2.238,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-02,2014,2,eastern_pacific,Eastern Pacific,250,0,-1.058,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-03,2014,3,western_pacific,Western Pacific,145,0,-0.299,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-03,2014,3,central_pacific,Central Pacific,190,0,-1.894,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-03,2014,3,nino_34,Nino 3.4,210,0,-1.575,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-03,2014,3,eastern_pacific,Eastern Pacific,250,0,-2.818,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-04,2014,4,western_pacific,Western Pacific,145,0,-0.260,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-04,2014,4,central_pacific,Central Pacific,190,0,-1.628,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-04,2014,4,nino_34,Nino 3.4,210,0,-1.444,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-04,2014,4,eastern_pacific,Eastern Pacific,250,0,-2.039,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-05,2014,5,western_pacific,Western Pacific,145,0,-0.458,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-05,2014,5,central_pacific,Central Pacific,190,0,-1.750,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-05,2014,5,nino_34,Nino 3.4,210,0,-1.556,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-05,2014,5,eastern_pacific,Eastern Pacific,250,0,-0.827,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-06,2014,6,western_pacific,Western Pacific,145,0,-0.839,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-06,2014,6,central_pacific,Central Pacific,190,0,-1.893,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-06,2014,6,nino_34,Nino 3.4,210,0,-1.612,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-06,2014,6,eastern_pacific,Eastern Pacific,250,0,-0.913,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-07,2014,7,western_pacific,Western Pacific,145,0,-1.163,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-07,2014,7,central_pacific,Central Pacific,190,0,-1.905,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-07,2014,7,nino_34,Nino 3.4,210,0,-1.197,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-07,2014,7,eastern_pacific,Eastern Pacific,250,0,-1.425,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-08,2014,8,western_pacific,Western Pacific,145,0,-0.738,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-08,2014,8,central_pacific,Central Pacific,190,0,-1.451,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-08,2014,8,nino_34,Nino 3.4,210,0,-1.148,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-08,2014,8,eastern_pacific,Eastern Pacific,250,0,-1.525,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-09,2014,9,western_pacific,Western Pacific,145,0,-0.623,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-09,2014,9,central_pacific,Central Pacific,190,0,-1.224,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-09,2014,9,nino_34,Nino 3.4,210,0,-1.020,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-09,2014,9,eastern_pacific,Eastern Pacific,250,0,-1.394,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-10,2014,10,western_pacific,Western Pacific,145,0,-0.544,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-10,2014,10,central_pacific,Central Pacific,190,0,-1.000,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-10,2014,10,nino_34,Nino 3.4,210,0,-1.206,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-10,2014,10,eastern_pacific,Eastern Pacific,250,0,-2.083,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-11,2014,11,western_pacific,Western Pacific,145,0,-0.569,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-11,2014,11,central_pacific,Central Pacific,190,0,-0.832,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-11,2014,11,nino_34,Nino 3.4,210,0,-0.883,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-11,2014,11,eastern_pacific,Eastern Pacific,250,0,-1.557,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-12,2014,12,western_pacific,Western Pacific,145,0,0.180,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-12,2014,12,central_pacific,Central Pacific,190,0,-0.836,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-12,2014,12,nino_34,Nino 3.4,210,0,-1.081,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point
+2014-12,2014,12,eastern_pacific,Eastern Pacific,250,0,-1.529,La Niña,CMIP6 CESM2 historical Omon/tos nearest equatorial grid point

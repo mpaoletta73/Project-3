@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Nino and Pacific SST Anomalies</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <p class="kicker">DSC 106 Project 3 Checkpoint</p>
+    <h1>How do Pacific sea surface temperatures shift during El Nino events?</h1>
+    <p class="subtitle">
+      Six D3 checkpoint views of CMIP6 sea surface temperature anomalies in the equatorial Pacific.
   <title>El Niño &amp; the Environment — Project 3</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -16,7 +26,133 @@
   </header>
 
   <main>
+    <section class="summary-grid" aria-label="Dataset summary">
+      <div>
+        <span>Dataset</span>
+        <strong>CMIP6 CESM2 historical</strong>
+        <p>Google Cloud Zarr catalog, monthly ocean table <code>Omon</code>, variable <code>tos</code>.</p>
+      </div>
+      <div>
+        <span>Transformation</span>
+        <strong>SST anomaly</strong>
+        <p>Departure from normal conditions: each point minus its 1981-2010 monthly average.</p>
+      </div>
+      <div>
+        <span>Checkpoint question</span>
+        <strong>Pacific warming shifts</strong>
+        <p>Nino 3.4 anomaly classifies El Nino, Neutral, and La Nina-like months.</p>
+      </div>
+    </section>
 
+    <section class="section-head">
+      <div>
+        <h2>Checkpoint Exploratory Visualizations</h2>
+        <p>All values are SST anomalies in degrees Celsius for equatorial Pacific points, 1996-2014.</p>
+      </div>
+      <div id="data-status">Loading CMIP6 subset...</div>
+    </section>
+
+    <section class="chart-grid" aria-label="Six checkpoint visualizations">
+      <article class="panel panel-wide">
+        <h3>1. Pacific SST Anomaly Over Time</h3>
+        <p>Monthly Nino 3.4 departure from normal conditions, 1996-2014. Red dots mark El Nino-like months.</p>
+        <div id="time-series" class="chart"></div>
+        <p class="chart-note">Phase rule: El Nino-like months have Nino 3.4 SST anomaly at or above +0.5°C.</p>
+      </article>
+
+      <article class="panel">
+        <h3>2. Seasonal Pattern of Pacific SST Anomalies</h3>
+        <p>Warmer and cooler departures vary by month across the historical CMIP6 period.</p>
+        <div id="heatmap" class="chart"></div>
+        <p class="chart-note">Blue means cooler than normal; red means warmer than normal; white is near 0°C.</p>
+      </article>
+
+      <article class="panel">
+        <h3>3. SST Anomaly by Climate Phase</h3>
+        <p>Average Pacific temperature departures grouped into El Nino, Neutral, and La Nina-like periods.</p>
+        <div id="phase-bars" class="chart"></div>
+        <p class="chart-note">Phases are assigned from the Nino 3.4 anomaly: ≥ +0.5°C, between -0.5°C and +0.5°C, or ≤ -0.5°C.</p>
+      </article>
+
+      <article class="panel panel-wide">
+        <h3>4. Regional SST Anomaly Comparison</h3>
+        <p>Different equatorial Pacific regions show different warming and cooling patterns over time.</p>
+        <div id="small-multiples" class="chart"></div>
+        <p class="chart-note">Each panel uses the same y-axis so the regional swings are comparable.</p>
+      </article>
+
+      <article class="panel">
+        <h3>5. Longitude Profile Across the Equatorial Pacific</h3>
+        <p>SST anomalies across the Pacific help show where El Nino warming is strongest.</p>
+        <div id="longitude-profile" class="chart"></div>
+        <p class="chart-note">Points summarize the average anomaly during El Nino-like months only.</p>
+      </article>
+
+      <article class="panel">
+        <h3>6. Interactive Pacific SST Explorer</h3>
+        <p>Use the controls to explore how SST anomalies change over time and region.</p>
+        <div class="controls">
+          <label>
+            Selected month
+            <input id="date-slider" type="range" min="0" max="0" value="0" step="1" />
+            <span id="date-label">--</span>
+          </label>
+          <label>
+            Climate phase
+            <select id="phase-select">
+              <option value="all">All climate phases</option>
+              <option value="El Niño">El Nino</option>
+              <option value="Neutral">Neutral</option>
+              <option value="La Niña">La Nina</option>
+            </select>
+          </label>
+          <label>
+            Pacific region
+            <select id="region-select">
+              <option value="all">All regions</option>
+              <option value="western_pacific">Western Pacific</option>
+              <option value="central_pacific">Central Pacific</option>
+              <option value="nino_34">Nino 3.4</option>
+              <option value="eastern_pacific">Eastern Pacific</option>
+            </select>
+          </label>
+        </div>
+        <div id="prototype" class="chart"></div>
+        <p class="chart-note">The prototype keeps the final interaction simple: time, phase, and region.</p>
+      </article>
+    </section>
+
+    <article id="writeup">
+      <h2>Checkpoint Notes</h2>
+      <section>
+        <h3>Data Source and Transformation</h3>
+        <p>
+          We got the data from the Google Cloud CMIP6 Zarr catalog using the same general steps as the class
+          notebook. We queried the catalog with Pandas, opened the NCAR CESM2 historical <code>Omon/tos</code>
+          store with <code>gcsfs</code> and <code>xarray</code>, pulled out a few equatorial Pacific points,
+          and saved the smaller dataset as a CSV for D3. Since the historical run ends in 2014, these graphs focus
+          on 1996-2014.
+        </p>
+      </section>
+      <section>
+        <h3>Design Rationale</h3>
+        <p>
+          We use SST anomaly instead of raw temperature because El Nino is about how much the Pacific changes from
+          normal conditions. The color scale is centered at 0°C, with blue showing cooler-than-normal water, white
+          showing near-normal conditions, and red showing warmer-than-normal water. The graphs start with the overall
+          time pattern, then show seasonality, regional differences, and a first version of the interactive idea.
+        </p>
+      </section>
+      <section>
+        <h3>Video Script Pointers</h3>
+        <p>
+          In the video, we can say that CMIP6 sea surface temperature fits our question because El Nino is defined by
+          unusual warming in the Pacific. Then we can briefly walk through the time series, seasonal heatmap, phase
+          comparison, regional comparison, longitude profile, and prototype. The final version will make the time
+          slider, phase filter, and region filter feel more polished.
+        </p>
+      </section>
+    </article>
     <!-- ═══════════════════════════════════════════════════════
          HOW TO ADD YOUR VISUALIZATION
          1. Create your script file, e.g. js/vis1.js
@@ -246,10 +382,12 @@
 
   </main>
 
-  <footer>
-    <p>Project 3 &mdash; Data Visualization &mdash; 2026</p>
-  </footer>
+  <footer>Project 3 Checkpoint - D3 only - CMIP6 Pacific SST subset</footer>
+  <div id="tooltip" class="tooltip" hidden></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="js/visualization.js"></script>
+  <script src="js/main.js"></script>
   <!--
     ═══════════════════════════════════════════════════════
     SCRIPTS — add your visualization scripts below.

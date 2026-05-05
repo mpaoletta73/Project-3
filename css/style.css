@@ -1,6 +1,19 @@
-/* ── Base ── */
+:root {
+  --bg: #f4f7f9;
+  --panel: #ffffff;
+  --ink: #152431;
+  --muted: #657584;
+  --border: #d8e2ea;
+  --blue: #2166ac;
+  --red: #b2182b;
+  --green: #267355;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
   background: #f4f4f4;
@@ -39,6 +52,233 @@ main {
 .vis-author     { font-size: 0.85rem; font-weight: normal; color: #555; }
 .vis-subtitle   { margin: 0.2rem 0 0; font-size: 0.85rem; color: #666; }
 
+.summary-grid p,
+.section-head p,
+.panel p,
+#writeup p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.section-head h2 {
+  margin: 0 0 4px;
+  font-size: 1.35rem;
+}
+
+#data-status {
+  color: var(--green);
+  font-size: 0.86rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.chart-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel {
+  min-width: 0;
+  padding: 16px;
+}
+
+.panel-wide {
+  grid-column: span 2;
+}
+
+.panel h3 {
+  margin: 0 0 5px;
+  font-size: 1.04rem;
+  line-height: 1.25;
+}
+
+.panel p {
+  font-size: 0.88rem;
+}
+
+.chart {
+  width: 100%;
+  min-height: 300px;
+  margin-top: 14px;
+}
+
+.chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.controls label {
+  display: grid;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.controls input,
+.controls select {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+}
+
+#date-label {
+  color: var(--ink);
+  font-size: 0.86rem;
+  text-transform: none;
+}
+
+.axis text {
+  fill: var(--muted);
+  font-size: 11.5px;
+}
+
+.axis path,
+.axis line {
+  stroke: #a8b5c0;
+}
+
+.grid line {
+  stroke: #e8eef3;
+}
+
+.grid path {
+  display: none;
+}
+
+.main-line,
+.small-line,
+.profile-line,
+.prototype-line {
+  fill: none;
+  stroke: #1d5f8c;
+  stroke-width: 2.4px;
+}
+
+.small-line {
+  stroke: #267355;
+}
+
+.profile-line,
+.prototype-line {
+  stroke: #566573;
+}
+
+.zero-line {
+  stroke: #5d6d7e;
+  stroke-dasharray: 4 4;
+}
+
+.threshold-line {
+  stroke: var(--red);
+  stroke-dasharray: 5 4;
+}
+
+.event-dot,
+.profile-dot,
+.prototype-dot {
+  stroke: white;
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+.event-dot {
+  fill: var(--red);
+}
+
+.axis-label,
+.note,
+.legend-label,
+.legend-title,
+.panel-title,
+.point-label,
+.prototype-title,
+.empty {
+  fill: var(--muted);
+  font-size: 12px;
+}
+
+.legend-title {
+  font-weight: 800;
+}
+
+.panel-title,
+.prototype-title,
+.point-label {
+  fill: var(--ink);
+  font-weight: 800;
+}
+
+.point-label {
+  font-size: 11px;
+}
+
+.chart-note {
+  margin-top: 8px !important;
+  padding-top: 8px;
+  border-top: 1px solid #edf2f6;
+  font-size: 0.82rem !important;
+  color: #536777 !important;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 20;
+  max-width: 240px;
+  padding: 9px 11px;
+  border-radius: 6px;
+  background: rgba(16, 38, 56, 0.94);
+  color: white;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  pointer-events: none;
+  box-shadow: 0 10px 28px rgba(16, 38, 56, 0.22);
+}
+
+#writeup {
+  margin-top: 16px;
+  padding: 20px 22px;
+}
+
+#writeup h2,
+#writeup h3 {
+  margin: 0;
+}
+
+#writeup h3 {
+  margin-top: 18px;
+  font-size: 1rem;
+}
+
+#writeup p {
+  margin-top: 7px;
+}
+
+code {
+  padding: 0.08em 0.3em;
+  border-radius: 4px;
+  background: #edf3f6;
 /* The box group members drop their SVG/canvas into */
 .vis-container {
   min-height: 450px;
@@ -208,9 +448,32 @@ main {
 #writeup a  { color: #1a6cb0; }
 #writeup code { background: #f0f0f0; padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.88em; }
 
-/* ── Footer ── */
 footer {
+  padding: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
   text-align: center;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 860px) {
+  .summary-grid,
+  .chart-grid,
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-wide {
+    grid-column: auto;
+  }
+
+  .section-head {
+    display: block;
+  }
+
+  #data-status {
+    margin-top: 8px;
+  }
   padding: 1rem;
   color: #888;
   font-size: 0.82rem;
