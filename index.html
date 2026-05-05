@@ -71,7 +71,7 @@
     <section class="vis-section">
       <div class="vis-header">
         <h2>Visualization 5 <span class="vis-author">— Thomas Deitel</span></h2>
-        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+        <p class="vis-subtitle">Which environmental indicators changed most from 1990–2020? Annual values from the local environmental subset, grouped by year/region/variable before plotting.</p>
       </div>
       <div id="vis-5" class="vis-container">
         <p class="placeholder">📌 Thomas — target <code>#vis-5</code> in <code>js/vis5.js</code></p>
@@ -175,7 +175,15 @@
         tooltips show the exact precipitation value, ONI anomaly, and ENSO status for any month.</p>
 
         <h4>Visualization 5 (Thomas Deitel) — Visual Encodings &amp; Interaction</h4>
-        <p>[ Thomas: describe your marks, channels, color palette, and interactions. ]</p>
+        <p>Vis 5 is an exploratory multi-line chart for quickly comparing how each available
+        environmental indicator changes over time. Year is encoded on the X axis and the selected
+        indicator's measured value is encoded by vertical position, which is the most direct channel
+        for reading temporal change. Region is encoded by line color so multiple regions can be
+        compared when the selected variable includes more than one region. The measure buttons act
+        as a dynamic query filter, letting the viewer move between temperature, precipitation, CO2,
+        and sea level without mixing incompatible units on one axis. Hover interaction provides
+        details-on-demand for the nearest year, and clicking legend items hides or restores regions
+        so the viewer can isolate one line when comparisons get crowded.</p>
 
         <h4>Visualization 6 (Gilad Segal) — Visual Encodings &amp; Interaction</h4>
         <p>[ Gilad: describe your marks, channels, color palette, and interactions. ]</p>
@@ -209,6 +217,17 @@
           <li><strong>ONI season-to-month mapping:</strong> The ONI file uses 3-month season codes
           (e.g. DJF, MAM). These are mapped to their middle month (DJF → January, MAM → April,
           etc.) to align ENSO shading bands with the monthly precipitation x-axis.</li>
+        </ul>
+        <h4>Visualization 5 — Environmental Indicator Explorer</h4>
+        <ul>
+          <li><strong>Typed parsing:</strong> Year and value fields are converted from strings to
+          numbers, and rows with invalid critical fields are dropped.</li>
+          <li><strong>Duplicate aggregation:</strong> Rows with the same year, variable, and region
+          are averaged before plotting so repeated observations would not silently receive extra
+          weight.</li>
+          <li><strong>Dynamic filtering:</strong> The selected measure filters the dataset to a
+          single unit at a time, preventing temperature, precipitation, CO2, and sea level from being
+          compared on a misleading shared scale.</li>
         </ul>
       </section>
 
@@ -245,7 +264,7 @@
   <!-- <script src="js/vis2.js"></script> -->
   <script src="js/vis3.js"></script>
   <script src="js/vis4.js"></script>
-  <!-- <script src="js/vis5.js"></script> -->
+  <script src="js/vis5.js"></script>
   <script src="js/vis6.js"></script>
 
 </body>

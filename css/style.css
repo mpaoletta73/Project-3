@@ -70,6 +70,118 @@ main {
   color: #555;
 }
 
+/* ── Visualization 5 ── */
+.vis5-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0 0 0.35rem;
+}
+.vis5-control-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.vis5-controls button {
+  border: 1px solid #c8c8c8;
+  border-bottom: 2px solid #aaa;
+  background: #fff;
+  color: #333;
+  border-radius: 4px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.vis5-controls button.active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, white);
+  color: #111;
+  font-weight: 700;
+}
+.vis5-note {
+  margin: 0 0 0.25rem;
+  color: #666;
+  font-size: 0.82rem;
+}
+.vis5-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.vis5-grid line {
+  stroke: #e7e7e7;
+}
+.vis5-grid path {
+  display: none;
+}
+.vis5-line {
+  fill: none;
+}
+.vis5-point {
+  pointer-events: none;
+}
+.vis5-overlay {
+  fill: transparent;
+  pointer-events: all;
+}
+.vis5-hover-line {
+  stroke: #333;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.vis5-legend-title {
+  fill: #666;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.vis5-legend-item {
+  cursor: pointer;
+}
+.vis5-legend-item text {
+  fill: #333;
+  font-size: 0.78rem;
+}
+.vis5-tooltip {
+  position: absolute;
+  z-index: 10;
+  min-width: 160px;
+  max-width: 230px;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  color: #222;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  pointer-events: none;
+}
+.vis5-tooltip strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.vis5-tooltip span {
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+}
+.vis5-error {
+  color: #8a1f11;
+  background: #fff0ec;
+  border: 1px solid #f1b9aa;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
 /* ── Write-up ── */
 #writeup {
   background: #fff;
