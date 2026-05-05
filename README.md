@@ -2,7 +2,7 @@
 
 DSC 106 Project 3 checkpoint page built with D3.js.
 
-## Question
+**Live site:** https://mpaoletta73.github.io/Project-3/
 
 How do Pacific sea surface temperatures shift during El Nino events?
 

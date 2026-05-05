@@ -13,6 +13,15 @@
     <h1>How do Pacific sea surface temperatures shift during El Nino events?</h1>
     <p class="subtitle">
       Six D3 checkpoint views of CMIP6 sea surface temperature anomalies in the equatorial Pacific.
+  <title>El Niño &amp; the Environment — Project 3</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>How Has El Niño Affected the Environment?</h1>
+    <p class="subtitle">
+      An interactive exploration using NASA MODIS / GOES / NOAA data &mdash; Project 3
     </p>
   </header>
 
@@ -144,6 +153,233 @@
         </p>
       </section>
     </article>
+    <!-- ═══════════════════════════════════════════════════════
+         HOW TO ADD YOUR VISUALIZATION
+         1. Create your script file, e.g. js/vis1.js
+         2. Uncomment the matching <script> tag at the bottom
+         3. Inside your script, select the container and remove
+            the placeholder, then append your SVG:
+              d3.select('#vis-1').select('.placeholder').remove();
+              const svg = d3.select('#vis-1').append('svg')...
+         4. Replace the subtitle text below with your chart title
+    ════════════════════════════════════════════════════════ -->
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 1 <span class="vis-author">— Sancho Syquia</span></h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+      </div>
+      <div id="vis-1" class="vis-container">
+        <p class="placeholder">📌 Sancho — target <code>#vis-1</code> in <code>js/vis1.js</code></p>
+      </div>
+    </section>
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 2 <span class="vis-author">— Sancho Syquia</span></h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+      </div>
+      <div id="vis-2" class="vis-container">
+        <p class="placeholder">📌 Sancho — target <code>#vis-2</code> in <code>js/vis2.js</code></p>
+      </div>
+    </section>
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 3 <span class="vis-author">— Matthew Paoletta</span></h2>
+        <p class="vis-subtitle">Where does El Niño warm the world? Annual mean surface temperature anomaly (NASA POWER T2M) for 5 key regions, 1990–2024 — animated year by year, classified by NOAA ONI.</p>
+      </div>
+      <div id="vis-3" class="vis-container">
+        <p class="placeholder">📌 Matthew — target <code>#vis-3</code> in <code>js/vis3.js</code></p>
+      </div>
+    </section>
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 4 <span class="vis-author">— Matthew Paoletta</span></h2>
+        <p class="vis-subtitle">How does El Niño flip rainfall patterns? Monthly precipitation (NASA POWER PRECTOTCORR, mm/day) across 5 regions, 1990–2024 — click the legend to compare regions and brush to zoom into key El Niño events.</p>
+      </div>
+      <div id="vis-4" class="vis-container">
+        <p class="placeholder">📌 Matthew — target <code>#vis-4</code> in <code>js/vis4.js</code></p>
+      </div>
+    </section>
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 5 <span class="vis-author">— Thomas Deitel</span></h2>
+        <p class="vis-subtitle">Which environmental indicators changed most from 1990–2020? Annual values from the local environmental subset, grouped by year/region/variable before plotting.</p>
+      </div>
+      <div id="vis-5" class="vis-container">
+        <p class="placeholder">📌 Thomas — target <code>#vis-5</code> in <code>js/vis5.js</code></p>
+      </div>
+    </section>
+
+    <section class="vis-section">
+      <div class="vis-header">
+        <h2>Visualization 6 <span class="vis-author">— Gilad Segal</span></h2>
+        <p class="vis-subtitle">[ Add your subtitle / data transformation note here ]</p>
+      </div>
+      <div id="vis-6" class="vis-container">
+        <p class="placeholder">📌 Gilad — target <code>#vis-6</code> in <code>js/vis6.js</code></p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         WRITE-UP  (required by rubric — fill in before submitting)
+    ════════════════════════════════════════════════════════ -->
+    <article id="writeup">
+      <h2>Project Write-Up</h2>
+
+      <section>
+        <h3>Research Question</h3>
+        <p>
+          How does El Niño alter key environmental indicators — sea surface temperature,
+          precipitation, vegetation cover, and atmospheric conditions — across the Pacific
+          region, as observed in NASA satellite and NOAA climate data?
+        </p>
+      </section>
+
+      <section>
+        <h3>Data Sources</h3>
+        <ul>
+          <li>
+            <strong>NOAA Oceanic Niño Index (ONI):</strong> 3-month rolling average sea-surface
+            temperature anomalies in the Niño 3.4 region (5°N–5°S, 170°W–120°W), 1950–present.
+            Fetched as a plain-text table and stored locally as <code>data/oni.csv</code> to avoid
+            browser CORS restrictions.
+            <a href="https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt" target="_blank">CPC NCEP</a>
+          </li>
+          <li>
+            <strong>NASA POWER API (T2M — 2 m Surface Temperature):</strong> Monthly mean
+            near-surface air temperature (°C) at point locations, 1990–2024, retrieved in JSON
+            format directly in the browser. Used in Visualization 3.
+            <a href="https://power.larc.nasa.gov/" target="_blank">NASA POWER</a>
+          </li>
+          <li>
+            <strong>NASA POWER API (PRECTOTCORR — Precipitation):</strong> Monthly bias-corrected
+            precipitation (mm/day) at point locations, 1990–2024. Used in Visualization 4.
+            <a href="https://power.larc.nasa.gov/" target="_blank">NASA POWER</a>
+          </li>
+          <li>
+            <strong>Natural Earth (world-atlas):</strong> 110 m resolution country polygons
+            used to render the base map in Visualization 3, served via jsDelivr CDN.
+            <a href="https://github.com/topojson/world-atlas" target="_blank">world-atlas</a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Design Rationale</h3>
+        <p><em>
+          For each visualization, explain: what marks and encoding channels you chose and why,
+          what alternatives you considered, and how your interaction design helps the reader
+          discover patterns that a static plot could not.
+        </em></p>
+
+        <h4>Visualization 1 (Sancho Syquia) — Visual Encodings &amp; Interaction</h4>
+        <p>[ Sancho: describe your marks, channels, color palette, and interactions (e.g. tooltips, brushing, filters). ]</p>
+
+        <h4>Visualization 2 (Sancho Syquia) — Visual Encodings &amp; Interaction</h4>
+        <p>[ Sancho: describe your marks, channels, color palette, and interactions. ]</p>
+
+        <h4>Visualization 3 (Matthew Paoletta) — Visual Encodings &amp; Interaction</h4>
+        <p>Vis 3 uses a geographic point map as its primary mark type, with five circles positioned
+        at their real-world coordinates on a Natural Earth projection. Color is the primary encoding
+        channel &mdash; a diverging red&ndash;blue scale maps each region&rsquo;s annual temperature
+        anomaly, where red signals warming above the regional long-term average (the El Ni&ntilde;o
+        signature) and blue signals cooling. Geographic position was chosen over a line chart because
+        the question &ldquo;where does El Ni&ntilde;o warm the world?&rdquo; is inherently spatial;
+        placing circles on a map lets the viewer instantly see which regions warm together versus in
+        opposition. A line chart was the original approach but was replaced because five lines on
+        different absolute temperature scales created an unreadable spaghetti plot that obscured the
+        ENSO signal. Three interactions support exploration: a year slider to manually inspect any
+        year, a Play button that animates 1990&ndash;2024 at one year per second so the viewer can
+        watch El Ni&ntilde;o events pulse red across regions, and a hover tooltip showing the exact
+        anomaly value and regional baseline.</p>
+
+        <h4>Visualization 4 (Matthew Paoletta) — Visual Encodings &amp; Interaction</h4>
+        <p>Vis 4 uses a line chart with time on the X axis and monthly precipitation (mm/day) on
+        the Y axis. A single colored line represents the selected region, with El Ni&ntilde;o and
+        La Ni&ntilde;a months shaded as red and blue background bands respectively &mdash; overlaying
+        ENSO phase directly onto the precipitation trace makes wet/dry shifts during ENSO events
+        immediately visible without requiring the viewer to cross-reference a separate chart. A
+        focus+context layout (main chart plus a brush-zoomable mini-chart below) was chosen because
+        35 years of monthly data at full resolution is too dense to read individual events; the brush
+        lets the viewer isolate a specific El Ni&ntilde;o episode (e.g. 1997&ndash;98) and inspect
+        it closely. A dropdown switches between all five regions, rescaling the Y axis to each
+        region&rsquo;s own range so that arid Peru and monsoon-driven India are both readable. Hover
+        tooltips show the exact precipitation value, ONI anomaly, and ENSO status for any month.</p>
+
+        <h4>Visualization 5 (Thomas Deitel) — Visual Encodings &amp; Interaction</h4>
+        <p>Vis 5 is an exploratory multi-line chart for quickly comparing how each available
+        environmental indicator changes over time. Year is encoded on the X axis and the selected
+        indicator's measured value is encoded by vertical position, which is the most direct channel
+        for reading temporal change. Region is encoded by line color so multiple regions can be
+        compared when the selected variable includes more than one region. The measure buttons act
+        as a dynamic query filter, letting the viewer move between temperature, precipitation, CO2,
+        and sea level without mixing incompatible units on one axis. Hover interaction provides
+        details-on-demand for the nearest year, and clicking legend items hides or restores regions
+        so the viewer can isolate one line when comparisons get crowded.</p>
+
+        <h4>Visualization 6 (Gilad Segal) — Visual Encodings &amp; Interaction</h4>
+        <p>[ Gilad: describe your marks, channels, color palette, and interactions. ]</p>
+      </section>
+
+      <section>
+        <h3>Data Transformations</h3>
+        <h4>Visualization 3 — Temperature Anomaly Map</h4>
+        <ul>
+          <li><strong>Sentinel filtering:</strong> NASA POWER returns <code>-999</code> for missing
+          months; these values are dropped before any calculation.</li>
+          <li><strong>Monthly → annual aggregation:</strong> The 12 monthly T2M values for each
+          year are averaged into a single annual mean per region, reducing 420 monthly frames to
+          35 annual steps and eliminating the seasonal cycle from the animation.</li>
+          <li><strong>Anomaly normalization:</strong> Each region's long-term mean (average of all
+          annual means, 1990–2024) is subtracted from its yearly value, producing a temperature
+          anomaly in °C. This removes absolute temperature differences between regions (e.g. India
+          averages ~27°C; Australia ~21°C) so the color scale reflects only ENSO-driven departures
+          from normal, not geographic climate differences.</li>
+          <li><strong>ENSO classification:</strong> A year is labeled El Niño if 5 or more of its
+          12 monthly ONI anomalies are ≥ +0.5°C, and La Niña if 5 or more are ≤ −0.5°C.</li>
+        </ul>
+        <h4>Visualization 4 — Precipitation Time Series</h4>
+        <ul>
+          <li><strong>Sentinel filtering:</strong> PRECTOTCORR values of <code>-999</code> are
+          removed before plotting.</li>
+          <li><strong>Per-region Y-axis rescaling:</strong> When the user switches regions via
+          the dropdown, the Y-axis domain is recomputed to that region's data range (0 to 110% of
+          its maximum), preventing misleadingly compressed or clipped views across regions with
+          very different precipitation totals.</li>
+          <li><strong>ONI season-to-month mapping:</strong> The ONI file uses 3-month season codes
+          (e.g. DJF, MAM). These are mapped to their middle month (DJF → January, MAM → April,
+          etc.) to align ENSO shading bands with the monthly precipitation x-axis.</li>
+        </ul>
+        <h4>Visualization 5 — Environmental Indicator Explorer</h4>
+        <ul>
+          <li><strong>Typed parsing:</strong> Year and value fields are converted from strings to
+          numbers, and rows with invalid critical fields are dropped.</li>
+          <li><strong>Duplicate aggregation:</strong> Rows with the same year, variable, and region
+          are averaged before plotting so repeated observations would not silently receive extra
+          weight.</li>
+          <li><strong>Dynamic filtering:</strong> The selected measure filters the dataset to a
+          single unit at a time, preventing temperature, precipitation, CO2, and sea level from being
+          compared on a misleading shared scale.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Development Process</h3>
+        <p>[ How was work split among team members? Roughly how many person-hours total? What aspects took the longest? ]</p>
+        <ul>
+          <li><strong>Sancho Syquia:</strong> Visualizations 1 &amp; 2 — [ describe tasks ]</li>
+          <li><strong>Matthew Paoletta:</strong> Visualizations 3 &amp; 4 — [ describe tasks ]</li>
+          <li><strong>Thomas Deitel:</strong> Visualization 5 — [ describe tasks ]</li>
+          <li><strong>Gilad Segal:</strong> Visualization 6 — [ describe tasks ]</li>
+        </ul>
+      </section>
+
+    </article>
+
   </main>
 
   <footer>Project 3 Checkpoint - D3 only - CMIP6 Pacific SST subset</footer>
@@ -152,5 +388,22 @@
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <script src="js/visualization.js"></script>
   <script src="js/main.js"></script>
+  <!--
+    ═══════════════════════════════════════════════════════
+    SCRIPTS — add your visualization scripts below.
+    D3 v7 is already loaded; add any other libraries you need.
+    ═══════════════════════════════════════════════════════
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson@3/dist/topojson.min.js"></script>
+
+  <!-- Uncomment each line when your script file is ready -->
+  <!-- <script src="js/vis1.js"></script> -->
+  <!-- <script src="js/vis2.js"></script> -->
+  <script src="js/vis3.js"></script>
+  <script src="js/vis4.js"></script>
+  <script src="js/vis5.js?v=edgefix2"></script>
+  <script src="js/vis6.js"></script>
+
 </body>
 </html>
