@@ -244,7 +244,7 @@ class FinalSSTVisualization {
       })
       .on('mouseleave', () => this.hideTooltip());
 
-    const title = filters.phase === 'all' ? 'All phase averages shown' : `${filters.phase} emphasized; other phases retained for comparison`;
+    const title = filters.phase === 'all' ? 'All phase averages shown' : `${filters.phase} highlighted; other phases kept for comparison`;
     g.append('text').attr('class', 'chart-title').attr('x', 0).attr('y', -10).text(title);
     this.addPhaseBarLegend(g, width - 238, -18, filters.phase);
     addAxisLabels(g, width, height, 'Pacific region', 'Average SST anomaly (°C)');
@@ -258,6 +258,9 @@ class FinalSSTVisualization {
       d => d.year,
       d => d.month
     ).flatMap(([year, byMonth]) => byMonth.map(([month, anomaly]) => ({ year, month, anomaly })));
+    const selected = parseDate(filters.date);
+    const selectedYear = selected.getUTCFullYear();
+    const selectedMonth = selected.getUTCMonth() + 1;
 
     const years = Array.from(new Set(data.map(d => d.year))).sort(d3.ascending);
     const { g, width, height } = createChart('#heatmap-chart', 980, 360, { top: 24, right: 28, bottom: 86, left: 50 });
@@ -276,6 +279,16 @@ class FinalSSTVisualization {
         this.showTooltip(event, `<strong>${this.months[d.month - 1]} ${d.year}</strong><br>Selected-region average: ${d.anomaly.toFixed(2)}°C`);
       })
       .on('mouseleave', () => this.hideTooltip());
+
+    const selectedCell = data.find(d => d.year === selectedYear && d.month === selectedMonth);
+    if (selectedCell) {
+      g.append('rect')
+        .attr('class', 'selected-heatmap-cell')
+        .attr('x', x(selectedCell.year))
+        .attr('y', y(selectedCell.month))
+        .attr('width', x.bandwidth())
+        .attr('height', y.bandwidth());
+    }
 
     g.append('g').attr('class', 'axis').attr('transform', `translate(0,${height})`)
       .call(d3.axisBottom(x).tickValues(years.filter(year => year % 2 === 0)).tickFormat(d3.format('d')));

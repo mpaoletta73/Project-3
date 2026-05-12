@@ -123,7 +123,7 @@ function updatePatternCallout(selectedRows, regions) {
   const east = visibleRows.find(d => d.region === 'eastern_pacific');
   if (!nino || visibleRows.length < 2) {
     document.getElementById('pattern-label').textContent = 'Single-region view';
-    document.getElementById('pattern-note').textContent = 'Turn on more regions to compare the shape of the Pacific SST anomaly pattern.';
+    document.getElementById('pattern-note').textContent = 'Turn on more regions to compare the Pacific pattern.';
     return;
   }
   if (!west || !east) {
@@ -131,7 +131,7 @@ function updatePatternCallout(selectedRows, regions) {
     const coolest = d3.least(visibleRows, d => d.anomaly);
     document.getElementById('pattern-label').textContent = 'Filtered regional comparison';
     document.getElementById('pattern-note').textContent =
-      `${formatMonth(nino.date)} has ${warmest.regionLabel} as the warmest enabled region and ${coolest.regionLabel} as the coolest. Turn on Western and Eastern Pacific to see the full basin gradient.`;
+      `${formatMonth(nino.date)} is warmest at ${warmest.regionLabel} and coolest at ${coolest.regionLabel} among the regions turned on. Turn on the west and east endpoints to see the full gradient.`;
     return;
   }
 
@@ -145,19 +145,19 @@ function updatePatternCallout(selectedRows, regions) {
   let note;
   if (spread < 0.45) {
     label = 'Basin-wide shift';
-    note = `${formatMonth(nino.date)} has a fairly even Pacific pattern. The warmest and coolest sampled regions differ by only ${spread.toFixed(2)}°C.`;
+    note = `${formatMonth(nino.date)} is pretty even across the sampled Pacific points. The warmest and coolest regions differ by only ${spread.toFixed(2)}°C.`;
   } else if (gradient > 0.6) {
     label = 'East-leaning warm pattern';
-    note = `${formatMonth(nino.date)} is strongest toward the central/eastern Pacific, with the east ${formatSigned(gradient)}°C above the west.`;
+    note = `${formatMonth(nino.date)} is strongest toward the central/eastern Pacific, with the east ${formatSigned(gradient)}°C compared with the west.`;
   } else if (gradient < -0.6) {
     label = 'West-leaning warm pattern';
-    note = `${formatMonth(nino.date)} is relatively warmer in the west, with the east ${formatSigned(gradient)}°C compared with the west.`;
+    note = `${formatMonth(nino.date)} is warmer in the west, with the east ${formatSigned(gradient)}°C compared with the west.`;
   } else if (warmest.region === 'nino_34' || warmest.region === 'central_pacific') {
     label = 'Central-Pacific peak';
-    note = `${formatMonth(nino.date)} peaks near ${warmest.regionLabel}, which is useful because Niño 3.4 is the phase-defining region.`;
+    note = `${formatMonth(nino.date)} peaks near ${warmest.regionLabel}, close to the area used to define the phase.`;
   } else {
     label = 'Mixed regional pattern';
-    note = `${formatMonth(nino.date)} does not follow a simple west-to-east ramp. Hover the dots to compare the four sampled points.`;
+    note = `${formatMonth(nino.date)} does not follow a simple west-to-east pattern. Hover the dots to compare the sampled points.`;
   }
 
   document.getElementById('pattern-label').textContent = label;
@@ -175,18 +175,18 @@ function updateInsightCards(selectedRows, regions) {
 
   document.getElementById('selected-nino').textContent = nino ? `${formatSigned(nino.anomaly)}°C` : '--';
   document.getElementById('selected-nino-note').textContent = nino
-    ? `${nino.phase} by the +/-0.5°C Niño 3.4 rule.`
+    ? `${nino.phase} using the +/-0.5°C Niño 3.4 cutoff.`
     : 'Niño 3.4 is not available for this month.';
 
   if (west && east) {
     const gradient = east.anomaly - west.anomaly;
     document.getElementById('selected-gradient').textContent = `${formatSigned(gradient)}°C east minus west`;
     document.getElementById('selected-gradient-note').textContent = gradient >= 0
-      ? 'Eastern Pacific is warmer relative to normal than the west.'
-      : 'Western Pacific is warmer relative to normal than the east.';
+      ? 'The east is warmer than usual compared with the west.'
+      : 'The west is warmer than usual compared with the east.';
   } else {
     document.getElementById('selected-gradient').textContent = 'Toggle east and west';
-    document.getElementById('selected-gradient-note').textContent = 'Enable both endpoint regions to compare the basin gradient.';
+    document.getElementById('selected-gradient-note').textContent = 'Turn on both endpoint regions to compare the gradient.';
   }
 
   document.getElementById('selected-warmest').textContent = warmest
