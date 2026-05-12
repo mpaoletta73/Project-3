@@ -31,7 +31,10 @@ class FinalSSTVisualization {
     const contextY = height + 44;
 
     const x = d3.scaleUtc().domain(d3.extent(data, d => d.time)).range([0, width]);
-    const y = d3.scaleLinear().domain([-2.6, 2.6]).range([height, 0]);
+    const y = d3.scaleLinear()
+      .domain(paddedAnomalyDomain(data, d => d.anomaly, { minimum: 2.6, minPadding: 0.5, paddingRatio: 0.12 }))
+      .nice()
+      .range([height, 0]);
     const x2 = x.copy();
     const y2 = d3.scaleLinear().domain(y.domain()).range([contextHeight, 0]);
     const line = scale => d3.line()
@@ -113,7 +116,10 @@ class FinalSSTVisualization {
       .sort((a, b) => d3.ascending(a.longitude, b.longitude));
     const { g, width, height } = createChart('#profile-chart', 560, 430, { top: 28, right: 28, bottom: 118, left: 62 });
     const x = d3.scaleLinear().domain([135, 260]).range([0, width]);
-    const y = d3.scaleLinear().domain([-2.6, 2.6]).range([height, 0]);
+    const y = d3.scaleLinear()
+      .domain(paddedAnomalyDomain(data, d => d.anomaly, { minimum: 0.8, minPadding: 0.8, paddingRatio: 0.22 }))
+      .nice()
+      .range([height, 0]);
 
     addGrid(g, y, width);
     g.append('g').attr('class', 'axis').attr('transform', `translate(0,${height})`)
@@ -322,6 +328,16 @@ function createChart(selector, outerWidth, outerHeight, margin) {
     .attr('role', 'img');
   const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
   return { svg, g, width, height };
+}
+
+function paddedAnomalyDomain(data, accessor, { minimum, minPadding, paddingRatio }) {
+  const [minValue = -minimum, maxValue = minimum] = d3.extent(data, accessor);
+  const span = Math.max(maxValue - minValue, minimum * 2);
+  const padding = Math.max(minPadding, span * paddingRatio);
+  return [
+    Math.min(-minimum, minValue - padding),
+    Math.max(minimum, maxValue + padding),
+  ];
 }
 
 function addGrid(g, y, width) {
