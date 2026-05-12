@@ -53,10 +53,10 @@ class FinalSSTVisualization {
       .attr('class', 'main-line')
       .attr('d', line(x));
 
-    const dots = g.selectAll('.overview-dot')
+    g.selectAll('.overview-dot')
       .data(data.filter(d => filteredSet.has(d.date)))
       .join('circle')
-      .attr('class', 'overview-dot')
+      .attr('class', d => d.date === selectedDate ? 'overview-dot selected-overview-dot' : 'overview-dot')
       .attr('cx', d => x(d.time))
       .attr('cy', d => y(d.anomaly))
       .attr('r', d => d.date === selectedDate ? 6 : 3.4)
@@ -66,12 +66,39 @@ class FinalSSTVisualization {
       .on('mouseleave', () => this.hideTooltip());
 
     if (selected) {
-      g.append('line')
+      const selectedMarker = g.append('g')
+        .attr('class', 'selected-marker')
+        .attr('transform', `translate(${x(selected.time)},0)`);
+
+      selectedMarker.append('rect')
+        .attr('class', 'selected-month-band')
+        .attr('x', -7)
+        .attr('y', 0)
+        .attr('width', 14)
+        .attr('height', height);
+
+      selectedMarker.append('line')
         .attr('class', 'selected-line')
-        .attr('x1', x(selected.time))
-        .attr('x2', x(selected.time))
         .attr('y1', 0)
         .attr('y2', height);
+
+      selectedMarker.append('circle')
+        .attr('class', 'selected-dot-ring')
+        .attr('cy', y(selected.anomaly))
+        .attr('r', 9);
+
+      selectedMarker.append('circle')
+        .attr('class', 'selected-dot-core')
+        .attr('cy', y(selected.anomaly))
+        .attr('r', 5)
+        .attr('fill', this.color(selected.anomaly));
+
+      selectedMarker.append('text')
+        .attr('class', 'selected-date-label')
+        .attr('x', x(selected.time) > width - 90 ? -10 : 10)
+        .attr('y', y(selected.anomaly) > 28 ? y(selected.anomaly) - 13 : y(selected.anomaly) + 23)
+        .attr('text-anchor', x(selected.time) > width - 90 ? 'end' : 'start')
+        .text(formatMonth(selected.date));
     }
 
     const xAxis = g.append('g')
@@ -86,6 +113,14 @@ class FinalSSTVisualization {
       .datum(data)
       .attr('class', 'context-line')
       .attr('d', d3.line().x(d => x2(d.time)).y(d => y2(d.anomaly)).curve(d3.curveMonotoneX));
+    if (selected) {
+      context.append('line')
+        .attr('class', 'selected-context-line')
+        .attr('x1', x2(selected.time))
+        .attr('x2', x2(selected.time))
+        .attr('y1', 0)
+        .attr('y2', contextHeight);
+    }
     context.append('g')
       .attr('class', 'axis')
       .attr('transform', `translate(0,${contextHeight})`)
@@ -98,11 +133,17 @@ class FinalSSTVisualization {
         const [start, end] = event.selection.map(x2.invert);
         x.domain([start, end]);
         focusPath.attr('d', line(x));
-        dots
+        g.selectAll('.overview-dot')
           .attr('cx', d => x(d.time))
           .attr('cy', d => y(d.anomaly));
         g.selectAll('.phase-band').attr('x', d => x(d.time)).attr('width', Math.max(1, width / data.length));
-        g.selectAll('.selected-line').attr('x1', x(selected.time)).attr('x2', x(selected.time));
+        if (selected) {
+          const selectedX = x(selected.time);
+          g.selectAll('.selected-marker').attr('transform', `translate(${selectedX},0)`);
+          g.selectAll('.selected-date-label')
+            .attr('x', selectedX > width - 90 ? -10 : 10)
+            .attr('text-anchor', selectedX > width - 90 ? 'end' : 'start');
+        }
         xAxis.call(d3.axisBottom(x).ticks(6));
       });
 

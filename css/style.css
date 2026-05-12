@@ -338,8 +338,43 @@ main {
 
 .selected-line {
   stroke: #17202a;
-  stroke-width: 1.6px;
+  stroke-width: 1.8px;
   stroke-dasharray: 3 4;
+}
+
+.selected-month-band {
+  fill: #152431;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.selected-dot-ring {
+  fill: white;
+  stroke: #17202a;
+  stroke-width: 2px;
+  pointer-events: none;
+}
+
+.selected-dot-core {
+  stroke: white;
+  stroke-width: 1px;
+  pointer-events: none;
+}
+
+.selected-date-label {
+  fill: #17202a;
+  font-size: 12px;
+  font-weight: 800;
+  paint-order: stroke;
+  pointer-events: none;
+  stroke: white;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+}
+
+.selected-context-line {
+  stroke: #17202a;
+  stroke-width: 1.5px;
 }
 
 .overview-dot,
@@ -347,6 +382,11 @@ main {
   stroke: white;
   stroke-width: 1.5px;
   cursor: pointer;
+}
+
+.selected-overview-dot {
+  stroke: #17202a;
+  stroke-width: 2px;
 }
 
 .profile-dot {
