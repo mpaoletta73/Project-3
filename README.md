@@ -1,14 +1,16 @@
-# El Nino and Pacific Sea Surface Temperature
+# El Niño and Pacific Sea Surface Temperature
 
-DSC 106 Project 3 checkpoint page built with D3.js.
+DSC 106 Project 3 final interactive visualization built with D3.js.
 
 **Live site:** https://mpaoletta73.github.io/Project-3/
 
-How do Pacific sea surface temperatures shift during El Nino events?
+How do Pacific sea surface temperatures shift during El Niño events?
+
+The final page answers this question by comparing western, central, Niño 3.4, and eastern Pacific SST anomalies.
 
 ## Data
 
-The checkpoint CSV at `data/pacific_sst_subset.csv` was prepared from the Google Cloud CMIP6 Zarr catalog:
+The final visualization CSV at `data/pacific_sst_subset.csv` was prepared from the Google Cloud CMIP6 Zarr catalog:
 
 - Model: NCAR CESM2
 - Experiment: historical
@@ -20,16 +22,17 @@ The checkpoint CSV at `data/pacific_sst_subset.csv` was prepared from the Google
 
 The source files provided with the assignment confirm that `tos` means Sea Surface Temperature and that `Omon` is monthly ocean data.
 
-## Checkpoint Visualizations
+## Final Visualization
 
-The page includes six D3 views for the checkpoint video:
+The page includes one coordinated D3 explorer:
 
-1. Nino 3.4 SST anomaly time series
-2. Monthly anomaly heatmap
-3. ENSO phase comparison
-4. Western, central, and eastern Pacific small multiples
-5. Longitude profile during El Nino months
-6. Interactive prototype with a time slider, phase filter, and Pacific point filter
+1. Niño 3.4 time series with ENSO phase bands, click selection, animation, and brush zoom
+2. Selected-month longitude profile across four equatorial Pacific regions
+3. Dynamic summary cards and basin-pattern callout for the selected month
+4. Phase-contrast comparison by region
+5. Seasonal heatmap for the currently enabled region set
+
+The webpage also includes the required final write-up covering design rationale, data transformations, interaction choices, and development process.
 
 ## Run Locally
 

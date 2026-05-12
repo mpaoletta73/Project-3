@@ -1,4 +1,4 @@
-"""Create the static CMIP6 Pacific SST CSV used by the D3 checkpoint page.
+"""Create the static CMIP6 Pacific SST CSV used by the D3 final page.
 
 This follows the assignment's CMIP6 notebook pattern:
 1. Read the Google Cloud CMIP6 Zarr catalog with Pandas.

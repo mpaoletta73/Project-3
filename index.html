@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Nino and Pacific SST Anomalies</title>
+  <title>El Niño and Pacific SST Anomalies</title>
   <link rel="icon" href="data:," />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
-    <p class="kicker">DSC 106 Project 3 Checkpoint</p>
-    <h1>How do Pacific sea surface temperatures shift during El Nino events?</h1>
+    <p class="kicker">DSC 106 Project 3 Final Submission</p>
+    <h1>How do Pacific sea surface temperatures shift during El Niño events?</h1>
     <p class="subtitle">
-      Six D3 checkpoint views of CMIP6 sea surface temperature anomalies in the equatorial Pacific.
+      An interactive D3 visualization of CMIP6 sea surface temperature anomalies from 1996-2014.
+      We answer the question by comparing how warming and cooling move from the western Pacific to the east.
     </p>
   </header>
 
@@ -21,132 +22,207 @@
       <div>
         <span>Dataset</span>
         <strong>CMIP6 CESM2 historical</strong>
-        <p>Google Cloud Zarr catalog, monthly ocean table <code>Omon</code>, variable <code>tos</code>.</p>
+        <p>Google Cloud CMIP6 Zarr catalog, monthly ocean table <code>Omon</code>, variable <code>tos</code>.</p>
       </div>
       <div>
         <span>Transformation</span>
         <strong>SST anomaly</strong>
-        <p>Departure from normal conditions: each point minus its 1981-2010 monthly average.</p>
+        <p>Each grid point is shown as departure from its 1981-2010 monthly average.</p>
       </div>
       <div>
-        <span>Checkpoint question</span>
-        <strong>Pacific warming shifts</strong>
-        <p>Nino 3.4 anomaly classifies El Nino, Neutral, and La Nina-like months.</p>
+        <span>Question</span>
+        <strong>SST shifts during El Niño</strong>
+        <p>Where along the equatorial Pacific does warming show up during El Niño-like months?</p>
       </div>
     </section>
 
     <section class="section-head">
       <div>
-        <h2>Checkpoint Exploratory Visualizations</h2>
-        <p>All values are SST anomalies in degrees Celsius for equatorial Pacific points, 1996-2014.</p>
+        <h2>Interactive Pacific SST Explorer</h2>
+        <p>
+          Select a climate phase, scrub through matching months, and toggle regions to compare
+          spatial and temporal SST anomaly patterns. Values are degrees Celsius.
+        </p>
       </div>
       <div id="data-status">Loading CMIP6 subset...</div>
     </section>
 
-    <section class="chart-grid" aria-label="Six checkpoint visualizations">
-      <article class="panel panel-wide">
-        <h3>1. Pacific SST Anomaly Over Time</h3>
-        <p>Monthly Nino 3.4 departure from normal conditions, 1996-2014. Red dots mark El Nino-like months.</p>
-        <div id="time-series" class="chart"></div>
-        <p class="chart-note">Phase rule: El Nino-like months have Nino 3.4 SST anomaly at or above +0.5°C.</p>
-      </article>
+    <section class="explorer" aria-label="Interactive visualization">
+      <div class="control-bar">
+        <button id="play-button" class="primary-button" type="button">Play</button>
+        <label>
+          Climate phase
+          <select id="phase-select">
+            <option value="all">All phases</option>
+            <option value="El Niño">El Niño-like months</option>
+            <option value="Neutral">Neutral months</option>
+            <option value="La Niña">La Niña-like months</option>
+          </select>
+        </label>
+        <label class="range-control">
+          Selected month
+          <input id="date-slider" type="range" min="0" max="0" value="0" step="1" />
+          <span id="date-label">--</span>
+        </label>
+      </div>
 
-      <article class="panel">
-        <h3>2. Seasonal Pattern of Pacific SST Anomalies</h3>
-        <p>Warmer and cooler departures vary by month across the historical CMIP6 period.</p>
-        <div id="heatmap" class="chart"></div>
-        <p class="chart-note">Blue means cooler than normal; red means warmer than normal; white is near 0°C.</p>
-      </article>
+      <div class="region-toggles" aria-label="Region filters">
+        <label><input type="checkbox" name="region" value="western_pacific" checked /> Western Pacific</label>
+        <label><input type="checkbox" name="region" value="central_pacific" checked /> Central Pacific</label>
+        <label><input type="checkbox" name="region" value="nino_34" checked /> Niño 3.4</label>
+        <label><input type="checkbox" name="region" value="eastern_pacific" checked /> Eastern Pacific</label>
+      </div>
 
-      <article class="panel">
-        <h3>3. SST Anomaly by Climate Phase</h3>
-        <p>Average Pacific temperature departures grouped into El Nino, Neutral, and La Nina-like periods.</p>
-        <div id="phase-bars" class="chart"></div>
-        <p class="chart-note">Phases are assigned from the Nino 3.4 anomaly: >= +0.5°C, between -0.5°C and +0.5°C, or <= -0.5°C.</p>
-      </article>
-
-      <article class="panel panel-wide">
-        <h3>4. Regional SST Anomaly Comparison</h3>
-        <p>Different equatorial Pacific regions show different warming and cooling patterns over time.</p>
-        <div id="small-multiples" class="chart"></div>
-        <p class="chart-note">Each panel uses the same y-axis so the regional swings are comparable.</p>
-      </article>
-
-      <article class="panel">
-        <h3>5. Longitude Profile Across the Equatorial Pacific</h3>
-        <p>SST anomalies across the Pacific help show where El Nino warming is strongest.</p>
-        <div id="longitude-profile" class="chart"></div>
-        <p class="chart-note">Points summarize the average anomaly during El Nino-like months only.</p>
-      </article>
-
-      <article class="panel">
-        <h3>6. Interactive Pacific SST Explorer</h3>
-        <p>Use the controls to explore how SST anomalies change over time and region.</p>
-        <div class="controls">
-          <label>
-            Selected month
-            <input id="date-slider" type="range" min="0" max="0" value="0" step="1" />
-            <span id="date-label">--</span>
-          </label>
-          <label>
-            Climate phase
-            <select id="phase-select">
-              <option value="all">All climate phases</option>
-              <option value="El Niño">El Nino</option>
-              <option value="Neutral">Neutral</option>
-              <option value="La Niña">La Nina</option>
-            </select>
-          </label>
-          <label>
-            Pacific region
-            <select id="region-select">
-              <option value="all">All regions</option>
-              <option value="western_pacific">Western Pacific</option>
-              <option value="central_pacific">Central Pacific</option>
-              <option value="nino_34">Nino 3.4</option>
-              <option value="eastern_pacific">Eastern Pacific</option>
-            </select>
-          </label>
+      <div class="insight-grid" aria-label="Selected month summary">
+        <div>
+          <span>Selected Niño 3.4 anomaly</span>
+          <strong id="selected-nino">--</strong>
+          <p id="selected-nino-note">--</p>
         </div>
-        <div id="prototype" class="chart"></div>
-        <p class="chart-note">The prototype keeps the final interaction simple: time, phase, and region.</p>
-      </article>
+        <div>
+          <span>East-west gradient</span>
+          <strong id="selected-gradient">--</strong>
+          <p id="selected-gradient-note">--</p>
+        </div>
+        <div>
+          <span>Warmest selected region</span>
+          <strong id="selected-warmest">--</strong>
+          <p id="selected-coolest">--</p>
+        </div>
+      </div>
+
+      <div class="pattern-callout" aria-live="polite">
+        <span id="pattern-label">Selected pattern</span>
+        <p id="pattern-note">Move the slider or choose a phase to compare the basin shape month by month.</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="viz-panel viz-panel-wide">
+          <div class="panel-heading">
+            <div>
+              <h3>Niño 3.4 SST Anomaly Over Time</h3>
+              <p>Background bands mark El Niño-like and La Niña-like months. Drag the lower brush to zoom.</p>
+            </div>
+            <strong id="phase-count">-- months</strong>
+          </div>
+          <div id="overview-chart" class="chart"></div>
+        </article>
+
+        <article class="viz-panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Selected Month Longitude Profile</h3>
+              <p>Dots show the selected month at four equatorial Pacific grid points.</p>
+            </div>
+            <strong id="selected-phase">--</strong>
+          </div>
+          <div id="profile-chart" class="chart"></div>
+        </article>
+
+        <article class="viz-panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Phase Contrast by Region</h3>
+              <p>Grouped bars compare El Niño-like, neutral, and La Niña-like averages for enabled regions.</p>
+            </div>
+          </div>
+          <div id="phase-chart" class="chart"></div>
+        </article>
+
+        <article class="viz-panel viz-panel-wide">
+          <div class="panel-heading">
+            <div>
+              <h3>Seasonal Heatmap</h3>
+              <p>Monthly anomalies for the selected region set, averaged when multiple regions are enabled.</p>
+            </div>
+          </div>
+          <div id="heatmap-chart" class="chart"></div>
+        </article>
+      </div>
     </section>
 
     <article id="writeup">
-      <h2>Checkpoint Notes</h2>
+      <h2>Write-Up</h2>
+
       <section>
-        <h3>Data Source and Transformation</h3>
+        <h3>Motivation</h3>
         <p>
-          We got the data from the Google Cloud CMIP6 Zarr catalog using the same general steps as the class
-          notebook. We queried the catalog with Pandas, opened the NCAR CESM2 historical <code>Omon/tos</code>
-          store with <code>gcsfs</code> and <code>xarray</code>, pulled out a few equatorial Pacific points,
-          and saved the smaller dataset as a CSV for D3. Since the historical run ends in 2014, these graphs focus
-          on 1996-2014.
+          Our main question is how Pacific sea surface temperatures shift during El Niño events. We answer it by
+          looking at where the shift shows up along a west-to-east slice of the equatorial Pacific. When Niño 3.4 gets
+          warmer or cooler than normal, does the change show up mostly in the central Pacific, the east, or across the
+          whole sampled slice? This matters because the usual Niño 3.4 index gives one number, but it does not show the
+          rest of the equatorial Pacific changing at the same time.
         </p>
       </section>
+
+      <section>
+        <h3>Data Source and Transformations</h3>
+        <p>
+          We used the CMIP6 dataset from the assignment, specifically the NCAR CESM2 historical run from the Google
+          Cloud CMIP6 Zarr catalog. The variable is <code>tos</code>, which is monthly sea surface temperature from the
+          <code>Omon</code> table. Since the raw Zarr store is too large to load directly in a GitHub Pages site, we
+          used a Python script with <code>xarray</code> to sample four equatorial Pacific grid points and save a smaller
+          CSV for D3.
+        </p>
+        <p>
+          We did not plot raw temperature because the seasonal cycle would dominate the view. Instead, every value is
+          an SST anomaly: the selected month's SST minus that grid point's 1981-2010 average for the same calendar
+          month. We then classify each month using the Niño 3.4 anomaly. Months at or above +0.5°C are El Niño-like,
+          months at or below -0.5°C are La Niña-like, and the rest are neutral. The page shows 1996-2014 because that
+          is the final part of the historical run we exported.
+        </p>
+      </section>
+
       <section>
         <h3>Design Rationale</h3>
         <p>
-          We use SST anomaly instead of raw temperature because El Nino is about how much the Pacific changes from
-          normal conditions. The color scale is centered at 0°C, with blue showing cooler-than-normal water, white
-          showing near-normal conditions, and red showing warmer-than-normal water. The graphs start with the overall
-          time pattern, then show seasonality, regional differences, and a first version of the interactive idea.
+          The main encoding is position on a shared y-axis because we are comparing anomaly size across time,
+          longitude, and ENSO phase. The top line chart gives the full time context. The longitude profile below it is
+          the main spatial view because the data is a west-to-east slice, not a full map. The summary cards and pattern
+          callout are there so the viewer does not have to mentally calculate the Niño 3.4 value, the east-west
+          gradient, or the warmest region every time they move the slider.
+        </p>
+        <p>
+          Color uses a red-white-blue diverging scale centered at 0°C. Red means warmer than normal, blue means cooler
+          than normal, and white means close to normal. We tried thinking about a map, but with only four sampled points
+          it made the data look more spatially detailed than it really was. A longitude profile is more honest for this
+          subset because it keeps the east-west ordering without pretending we have a dense field.
         </p>
       </section>
+
       <section>
-        <h3>Video Script Pointers</h3>
+        <h3>Interaction Design</h3>
         <p>
-          In the video, we can say that CMIP6 sea surface temperature fits our question because El Nino is defined by
-          unusual warming in the Pacific. Then we can briefly walk through the time series, seasonal heatmap, phase
-          comparison, regional comparison, longitude profile, and prototype. The final version will make the time
-          slider, phase filter, and region filter feel more polished.
+          The phase filter works like a dynamic query. If the viewer picks El Niño-like months, the slider only steps
+          through months that actually match that phase, instead of showing blank charts. Clicking points in the line
+          chart jumps to that month, the play button animates through the selected phase, and the brush lets the viewer
+          zoom into a shorter time range. The region checkboxes make it easier to compare only the parts of the Pacific
+          the viewer cares about. We kept all three phase averages visible in the grouped bars, but fade the phases that
+          are not selected, so the comparison does not disappear when filtering.
+        </p>
+      </section>
+
+      <section>
+        <h3>Development Process</h3>
+        <p>
+          We started wider than this final page. The first pass had several separate exploratory charts, but it felt
+          more like a separate chart gallery than one interactive visualization. After that, we narrowed the final version
+          to one question about the east-west SST pattern. Matthew handled the CMIP6 preprocessing and the first time
+          series sketches, Thomas worked on filtering and comparison ideas, and Gilad tested map/satellite-style ideas.
+          For the final page we kept the CMIP6 SST slice because it was the clearest match to the El Niño question.
+        </p>
+        <p>
+          In total we spent about 35-45 people-hours. The slowest parts were getting comfortable with the CMIP6 Zarr
+          workflow, reducing the data enough for a static website, and fixing the interaction logic so the phase filter
+          never creates an empty chart. The final D3 work was mostly connecting the controls to all the views, then
+          cleaning up labels, legends, and the write-up so someone could understand the transformations without reading
+          the Python script.
         </p>
       </section>
     </article>
   </main>
 
-  <footer>Project 3 Checkpoint - D3 only - CMIP6 Pacific SST subset</footer>
+  <footer>Project 3 Final Submission - D3 only - CMIP6 Pacific SST subset</footer>
   <div id="tooltip" class="tooltip" hidden></div>
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
